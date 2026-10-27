@@ -27,3 +27,7 @@ math{font-size:10.4pt}math[display=block]{margin:2pt 0}
 .en{font-size:8.8pt}
 .foot{position:absolute;bottom:8pt;left:22pt;right:22pt;font-size:7.6pt;border-top:.7pt solid #000;padding-top:2pt;display:flex;justify-content:space-between}
 .q li{margin:2pt 0}
+.jb{font-size:7.4pt;font-weight:bold;border:1pt solid #000;padding:0 2pt;margin-left:4pt;vertical-align:1pt;background:#fff;color:#000}
+.bar .jb{border-color:#fff;background:#000;color:#fff}
+.step{counter-reset:s}.step li{padding-left:13pt}.step li:before{counter-increment:s;content:counter(s);font-size:7pt;border:.8pt solid #000;border-radius:50%;width:9pt;height:9pt;line-height:9pt;text-align:center;top:1.5pt}
+.q{break-inside:avoid-column}

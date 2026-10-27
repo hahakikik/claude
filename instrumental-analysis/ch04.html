@@ -1,0 +1,344 @@
+<!doctype html><html lang=ko><meta charset=utf-8><title>4장 IR 총정리</title>
+<link rel=stylesheet href=style.css>
+<body>
+<div id=src data-title="4장 적외선 분광법 총정리" data-sub="기기분석 · Chap 16·17 · 교재 슬라이드 기준" data-foot="출처: 교재 슬라이드 Chap 16·17(p.N은 PDF 쪽) · 녹음 없음 · 족보 주제 반영 · [보충]은 슬라이드 밖 교재 수준 설명 · 파수 계산값은 직접 검산">
+
+<div class=sec><div class=bar>4-1. IR 영역과 단위 <small>p.3, p.5, p.33</small></div>
+<ul>
+<li>IR은 파장 <b>0.78~1000 μm</b>, 파수 <b>12,800~10 cm⁻¹</b>이다.</li>
+<li>IR 흡수·방출·반사 스펙트럼은 분자가 한 진동·회전 에너지 상태에서 다른 상태로 옮겨 가며 생긴다.</li>
+</ul>
+<div class=box><math display=block><mrow><mover><mi>ν</mi><mo>‾</mo></mover><mo>(</mo><msup><mtext>cm</mtext><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>λ</mi><mo>(</mo><mtext>μm</mtext><mo>)</mo></mrow></mfrac><mo>×</mo><msup><mn>10</mn><mn>4</mn></msup><mo>=</mo><mfrac><mrow><mi>ν</mi><mo>(</mo><mtext>Hz</mtext><mo>)</mo></mrow><mrow><mi>c</mi><mo>(</mo><mtext>cm/s</mtext><mo>)</mo></mrow></mfrac><mspace width="10pt"/><mi>E</mi><mo>=</mo><mi mathvariant="normal">h</mi><mi>c</mi><mover><mi>ν</mi><mo>‾</mo></mover></mrow></math>
+<p class=en>파수는 에너지와 진동수에 정비례하므로 IR에서는 파장 대신 파수(cm⁻¹)를 쓴다. 예: 2.5 μm는 4000 cm⁻¹.</p></div>
+<div class=fig><img src="assets/ch04/table16_1.png" style="width:90%"><small>Table 16-1 근적외(NIR) 12,800~4000, 중적외(MIR) 4000~200, 원적외(FIR) 200~10 cm⁻¹. 가장 많이 쓰는 범위는 4000~670 cm⁻¹(2.5~15 μm).</small></div>
+<div class=fig><img src="assets/ch04/table17_1.png"><small>p.33 NIR은 기본 진동의 배음(overtone)과 결합음(combination), MIR은 기본 진동(fundamental), FIR은 무거운 원자와 골격(backbone) 진동. Table 17-1 영역별 측정 형식과 용도.</small></div>
+<div class=fig><img src="assets/ch04/polystyrene.png" style="width:80%"><small>Fig 16-1 얇은 폴리스타이렌 필름 IR 스펙트럼. 세로축은 %T라 흡수 봉우리가 아래로 향한다. 2000 cm⁻¹에서 가로축 눈금이 바뀐다.</small></div>
+</div>
+
+<div class=sec><div class=bar>4-2. IR 흡수 조건: 쌍극자 모멘트<span class=jb>족보</span> <small>p.6</small></div>
+<ul>
+<li>IR을 흡수하려면 분자가 진동하거나 회전할 때 <b>알짜 쌍극자 모멘트가 변해야</b> 한다.</li>
+<li>빛의 교류 전기장이 분자와 상호작용해 그 운동의 진폭을 바꾼다. 진동수가 맞을 때만 일어난다.</li>
+<li>예: HCl은 전하 분포가 비대칭이라 쌍극자 모멘트가 크다(극성). IR 활성이다.</li>
+<li>O₂, N₂, Cl₂ 같은 <b>동핵 이원자 분자</b>는 진동·회전해도 쌍극자 모멘트가 변하지 않아 IR을 흡수하지 않는다.</li>
+</ul>
+<div class=sub>회전 전이와 진동-회전 전이 <small>p.6</small></div>
+<ul>
+<li>회전 준위 변화에 필요한 에너지는 매우 작아 ν̄ ≤ 100 cm⁻¹(λ &gt; 100 μm)에 해당한다. 기체는 양자화된 회전 준위 때문에 날카로운 선을, 액체·고체는 분자 간 충돌·상호작용 때문에 넓은 연속 띠를 보인다.</li>
+<li>진동-회전 전이는 중적외 영역이다. 기체는 진동 준위마다 여러 회전 준위가 있어 가까운 선이 여럿 보인다. 액체·고체는 그 선들이 사라지고 다소 넓은 진동 띠가 된다.</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>4-3. 분자 진동의 종류<span class=jb>족보</span> <small>p.7</small></div>
+<div class=two style="align-items:center">
+<div><ul>
+<li><b>신축(stretching)</b>: 결합 축을 따라 원자 간 거리가 계속 변한다.
+ 대칭(symmetric), 비대칭(asymmetric)</li>
+<li><b>굽힘(bending)</b>: 두 결합 사이 각이 변한다.
+ 가위(scissoring), 흔들기(rocking): 면 안.
+ 꼬리치기(wagging), 비틀기(twisting): 면 밖.</li>
+</ul></div>
+<div class=fig style="margin:0"><img src="assets/ch04/vib_types.png"><small>Fig 16-2 (a) 신축 (b) 굽힘. +, −는 지면 앞뒤 움직임.</small></div></div>
+<p class=note>[보충] 굽힘은 신축보다 힘상수가 작아 더 낮은 파수에서 나타난다. 예: H₂O 신축 3650·3760 cm⁻¹, 가위 굽힘 1595 cm⁻¹.</p>
+</div>
+
+<div class=sec><div class=bar>4-4. 조화 진동자와 Hooke 법칙<span class=jb>족보</span> <small>p.8~10</small></div>
+<p>이원자 분자의 신축 진동을 용수철로 연결된 두 질량으로 본다.</p>
+<div class=box>
+<math display=block><mrow><mi>F</mi><mo>=</mo><mo>−</mo><mi>k</mi><mi>y</mi><mspace width="8pt"/><mi>d</mi><mi>E</mi><mo>=</mo><mo>−</mo><mi>F</mi><mi>d</mi><mi>y</mi><mo>=</mo><mi>k</mi><mi>y</mi><mi>d</mi><mi>y</mi><mspace width="8pt"/><mi>E</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>k</mi><msup><mi>y</mi><mn>2</mn></msup></mrow></math>
+<p class=en>k 힘상수(force constant, 결합의 단단함), y 평형에서 벗어난 거리. 위치에너지는 포물선이다.</p></div>
+<div class=sub>고전적 진동수 유도 <small>p.9</small></div>
+<ol class=step>
+<li>Newton 제2법칙 F = ma = m(d²y/dt²)와 Hooke 법칙 F = −ky를 같게 놓는다.</li>
+<li>해를 y = A cos 2πν<sub>m</sub>t로 두고 두 번 미분해 대입하면 m·4π²ν<sub>m</sub>² = k가 된다.</li>
+<li>두 질량이면 m 대신 환산질량 μ를 쓴다.</li>
+</ol>
+<div class=box>
+<math display=block><mrow><msub><mi>ν</mi><mi>m</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><msqrt><mfrac><mi>k</mi><mi>μ</mi></mfrac></msqrt><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><msqrt><mfrac><mrow><mi>k</mi><mo>(</mo><msub><mi>m</mi><mn>1</mn></msub><mo>+</mo><msub><mi>m</mi><mn>2</mn></msub><mo>)</mo></mrow><mrow><msub><mi>m</mi><mn>1</mn></msub><msub><mi>m</mi><mn>2</mn></msub></mrow></mfrac></msqrt><mspace width="10pt"/><mi>μ</mi><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mn>1</mn></msub><msub><mi>m</mi><mn>2</mn></msub></mrow><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>+</mo><msub><mi>m</mi><mn>2</mn></msub></mrow></mfrac></mrow></math>
+</div>
+<div class=sub>양자역학적 처리 <small>p.10</small></div>
+<div class=box>
+<math display=block><mrow><mi>E</mi><mo>=</mo><mrow><mo>(</mo><mi>υ</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow><mfrac><mi mathvariant="normal">h</mi><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><msqrt><mfrac><mi>k</mi><mi>μ</mi></mfrac></msqrt><mo>=</mo><mrow><mo>(</mo><mi>υ</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow><mi mathvariant="normal">h</mi><msub><mi>ν</mi><mi>m</mi></msub><mspace width="10pt"/><mi mathvariant="normal">Δ</mi><mi>E</mi><mo>=</mo><mi mathvariant="normal">h</mi><msub><mi>ν</mi><mi>m</mi></msub></mrow></math>
+<p class=en>v 진동 양자수(0, 1, 2, …). 바닥 상태 E₀ = ½hν<sub>m</sub>(영점 에너지), 첫 들뜬 상태 E₁ = 3/2 hν<sub>m</sub>. 전이 에너지 ΔE = hν<sub>m</sub>이므로 흡수하는 빛의 진동수는 역학적 진동수 ν<sub>m</sub>과 같다. 조화 진동자의 선택 규칙은 Δv = ±1이다.</p></div>
+<div class=box>
+<math display=block><mrow><mover><mi>ν</mi><mo>‾</mo></mover><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi><mi>c</mi></mrow></mfrac><msqrt><mfrac><mi>k</mi><mi>μ</mi></mfrac></msqrt><mo>=</mo><mn>5.3</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>12</mn></mrow></msup><msqrt><mfrac><mi>k</mi><mi>μ</mi></mfrac></msqrt></mrow></math>
+<p class=en>ν̄ 파수(cm⁻¹), k 힘상수(<b>g/s² = dyn/cm 단위로 대입</b>), μ 환산질량(<b>g/원자</b> = 원자량을 6.02×10²³으로 나눔). 상수 5.3×10⁻¹² = 1/(2πc), c = 3×10¹⁰ cm/s.</p>
+<p class=en>힘상수: 단일결합 3×10²~8×10² N/m(평균 <b>5×10² N/m</b>), 이중결합 <b>10×10² N/m</b>, 삼중결합 <b>15×10² N/m</b>. 1 N/m = 1000 g/s².</p></div>
+<div class=fig><img src="assets/ch04/potential.png"><small>Fig 16-3 (a) 조화 진동자의 포물선 위치에너지 (b) 곡선 1 조화, 곡선 2 비조화(anharmonic). 실제 분자는 비조화라 준위 간격이 위로 갈수록 좁아지고, 큰 거리에서 해리 에너지에 수렴한다. 그래서 Δv = ±2, ±3 전이(배음, overtone)도 약하게 생긴다.</small></div>
+</div>
+
+<div class=sec><div class=bar>4-5. 파수 계산 풀이식<span class=jb>족보</span> <small>p.11</small></div>
+<ol class=step>
+<li>결합을 보고 k를 고른다. 단일 5×10², 이중 10×10², 삼중 15×10² N/m. <b>×1000 해서 g/s²로 바꾼다.</b></li>
+<li>환산질량 μ = m₁m₂/(m₁+m₂)를 원자량으로 계산하고 <b>6.02×10²³으로 나눠 g/원자</b>로 만든다.</li>
+<li>ν̄ = 5.3×10⁻¹² √(k/μ)에 대입한다.</li>
+<li>단위 점검: √(g·s⁻²/g) = s⁻¹이고, 1/(2πc)의 cm/s로 나누면 cm⁻¹이 나온다. 결과가 대략 500~4000 cm⁻¹ 사이인지 본다.</li>
+</ol>
+<div class=box>
+<p>예: C=C 신축(슬라이드 예제)</p>
+<math display=block><mrow><mi>μ</mi><mo>=</mo><mfrac><mrow><mn>12</mn><mo>×</mo><mn>12</mn></mrow><mrow><mn>12</mn><mo>+</mo><mn>12</mn></mrow></mfrac><mo>×</mo><mfrac><mn>1</mn><mrow><mn>6.02</mn><mo>×</mo><msup><mn>10</mn><mn>23</mn></msup></mrow></mfrac><mo>=</mo><mfrac><mn>6</mn><mrow><mn>6.02</mn><mo>×</mo><msup><mn>10</mn><mn>23</mn></msup></mrow></mfrac><mtext> g</mtext></mrow></math>
+<math display=block><mrow><mover><mi>ν</mi><mo>‾</mo></mover><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>×</mo><mn>3.14</mn><mo>×</mo><mn>3</mn><mo>×</mo><msup><mn>10</mn><mn>10</mn></msup></mrow></mfrac><msqrt><mfrac><mrow><mn>10</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><mrow><mn>6</mn><mo>/</mo><mn>6.02</mn><mo>×</mo><msup><mn>10</mn><mn>23</mn></msup></mrow></mfrac></msqrt><mo>=</mo><mn>1682</mn><msup><mtext> cm</mtext><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></math>
+<p class=en>계산 1682 cm⁻¹, 실측 <b>1650 cm⁻¹</b>. k = 10×10² N/m = 10×10⁵ g/s². 실측값이 약간 낮은 것은 실제 결합이 비조화이고 주변 결합과 짝지어 있기 때문이다.</p></div>
+<div class=sub>k와 μ에 따른 파수 변화 <small>p.11</small></div>
+<ul>
+<li><b>k가 클수록(결합 차수가 클수록) 파수가 높다</b>: C≡C 2150 &gt; C=C 1650 &gt; C−C 1200 cm⁻¹.</li>
+<li><b>μ가 클수록(원자가 무거울수록) 파수가 낮다</b>: C−H 3000 &gt; C−D 2206 &gt; C−C 1200 &gt; C−O 1100 &gt; C−Cl 800 cm⁻¹.</li>
+</ul>
+<p class=why>ν̄가 √(k/μ)에 비례하기 때문이다. 결합이 단단하면 빨리 진동하고, 매달린 질량이 무거우면 느리게 진동한다. 같은 k에서 H를 D로 바꾸면 μ가 약 2배가 되어 파수가 약 1/√2배(3000 → 약 2200)로 준다.</p>
+<div class=sub>PU 구조의 결합별 파수 계산 <span class=jb>족보</span></div>
+<p>[보충] 같은 식, 같은 k(단일 5, 이중 10, 삼중 15 ×10² N/m)로 직접 검산한 계산값이다. 괄호는 Table 17-3·교재의 실측 범위다.</p>
+<table><tr><th>결합</th><th>μ (원자량 단위)</th><th>계산 ν̄ (cm⁻¹)</th></tr>
+<tr><td>N−H</td><td>14·1/15 = 0.933</td><td><b>약 3010</b> (실측 3300~3500)</td></tr>
+<tr><td>C−H</td><td>12·1/13 = 0.923</td><td>약 3030 (2850~2970)</td></tr>
+<tr><td>C=O</td><td>12·16/28 = 6.86</td><td><b>약 1570</b> (1690~1760)</td></tr>
+<tr><td>C=C</td><td>6.00</td><td>약 1680 (1610~1680)</td></tr>
+<tr><td>C−N</td><td>12·14/26 = 6.46</td><td>약 1140 (1180~1360)</td></tr>
+<tr><td>C−O</td><td>6.86</td><td>약 1110 (1050~1300)</td></tr>
+<tr><td>N=C=O의 C=N</td><td>6.46</td><td>약 1620 (이소시아네이트 비대칭 신축 실측 약 2270)</td></tr></table>
+<p class=note>계산값은 평균 k로 어림한 값이라 실측과 차이가 난다. 특히 C=O는 실제 k가 약 12×10² N/m로 커서 1700 근처에 나오고, N=C=O는 두 이중결합이 강하게 짝지어(4-7) 2270 cm⁻¹ 근처에 센 띠를 낸다. 시험에서 주어진 k와 원자량을 그대로 넣어 같은 순서로 풀면 된다.</p>
+</div>
+
+<div class=sec><div class=bar>4-6. 진동 모드 수<span class=jb>족보</span> <small>p.12</small></div>
+<ul>
+<li>N개 원자로 된 분자는 <b>3N 자유도</b>를 가진다. 무게중심의 병진 3개, 전체 분자 회전, 나머지가 원자끼리의 진동이다.</li>
+<li><b>선형 분자: 3N − 5</b>개 진동(회전 2개). <b>비선형 분자: 3N − 6</b>개 진동(회전 3개). 이것을 정상 모드(normal mode)라 한다.</li>
+<li>예[보충]: CO₂(선형, N=3) 3·3−5 = 4개. H₂O(비선형) 3·3−6 = 3개.</li>
+</ul>
+<div class=sub>띠가 이론보다 적게 보이는 네 가지 이유</div>
+<ol>
+<li>대칭 때문에 진동해도 쌍극자 모멘트가 변하지 않는다(IR 불활성).</li>
+<li>두 개 이상 진동의 에너지가 같거나 거의 같다(겹침, degenerate).</li>
+<li>흡수 세기가 너무 약해 검출되지 않는다.</li>
+<li>진동 에너지가 기기의 측정 범위 밖에 있다.</li>
+</ol>
+<div class=sub>띠가 이론보다 많이 보이는 이유</div>
+<ul>
+<li><b>배음(overtone)</b>: 기본 진동수의 2배, 3배에 나타난다.</li>
+<li><b>결합음(combination band)</b>: 광자 하나가 두 진동 모드를 동시에 들뜨게 한다. 두 기본 진동수의 합이나 차 근처에 나온다.</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>4-7. 진동 짝지음(coupling) <small>p.13</small></div>
+<div class=two style="align-items:start">
+<div><ul>
+<li>신축끼리 강한 짝지음은 <b>두 진동이 원자 하나를 공유</b>할 때만 생긴다.</li>
+<li>굽힘끼리는 진동하는 기 사이에 공통 결합이 있어야 한다.</li>
+<li>신축과 굽힘은 신축 결합이 굽힘 각의 한 변일 때 짝짓는다.</li>
+<li>짝지은 기의 에너지가 비슷할수록 상호작용이 크다.</li>
+<li>결합 두 개 이상 떨어진 기끼리는 거의 상호작용이 없다.</li>
+<li>같은 대칭 종(symmetry species)이어야 짝짓는다.</li>
+</ul></div>
+<div class=fig style="margin:0"><img src="assets/ch04/coupling.png"><small>CO₂: 대칭 신축은 IR 불활성, 비대칭 신축 2330 cm⁻¹, 굽힘 677 cm⁻¹(겹침 2개). H₂O: 대칭 신축 3650, 비대칭 3760, 가위 1595 cm⁻¹.</small></div></div>
+<p class=note>[보충] 짝지음 때문에 CO₂의 C=O 신축은 독립된 C=O(약 1700 cm⁻¹) 하나가 아니라 대칭(1340, Raman 활성)과 비대칭(2330~2350) 두 진동으로 갈라진다. CO₂ 비대칭 신축은 이 장(p.13)에 2330, 5장(p.10)에 2350 cm⁻¹로 적혀 있다.</p>
+</div>
+
+<div class=sec><div class=bar>4-8. IR 기기의 세 종류 <small>p.14</small></div>
+<ul>
+<li>회절발 단색화 장치를 쓰는 <b>분산형 분광광도계</b>.</li>
+<li>간섭계를 쓰는 <b>Fourier 변환(FT) 분광기</b>.</li>
+<li>필터나 흡수 기체를 쓰는 <b>비분산형 광도계</b>. 특정 파장에서 대기 기체를 분석한다.</li>
+</ul>
+<p>중·원적외에서 FT 분광기의 장점은 속도, 신뢰성, 신호대잡음비, 편리함이다.</p>
+<div class=sub>FT-IR의 고유 장점 <span class=jb>족보</span></div>
+<ul>
+<li><b>처리량(throughput, Jacquinot) 이점</b>: 광학 요소가 적고 빛을 줄이는 슬릿이 없어 검출기에 들어오는 빛이 많다.</li>
+<li>분해능이 매우 높고 파장 재현성이 좋다. 선이 많고 겹친 복잡한 스펙트럼도 분석할 수 있다.</li>
+<li>광원의 모든 파장이 <b>동시에</b> 검출기에 도달한다. 전체 스펙트럼을 1초 이내에 얻는다. [보충] 이것을 다중화(multiplex, Fellgett) 이점이라 한다.</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>4-9. Fourier 변환과 Michelson 간섭계 <small>p.15~18</small></div>
+<div class=box>
+<math display=block><mrow><mi>P</mi><mo>(</mo><mi>δ</mi><mo>)</mo><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi>∞</mi></mrow><mrow><mo>+</mo><mi>∞</mi></mrow></msubsup><mi>B</mi><mo>(</mo><mover><mi>ν</mi><mo>‾</mo></mover><mo>)</mo><mi>cos</mi><mn>2</mn><mi>π</mi><mover><mi>ν</mi><mo>‾</mo></mover><mi>δ</mi><mspace width="2pt"/><mi>d</mi><mover><mi>ν</mi><mo>‾</mo></mover><mspace width="10pt"/><mi>B</mi><mo>(</mo><mover><mi>ν</mi><mo>‾</mo></mover><mo>)</mo><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi>∞</mi></mrow><mrow><mo>+</mo><mi>∞</mi></mrow></msubsup><mi>P</mi><mo>(</mo><mi>δ</mi><mo>)</mo><mi>cos</mi><mn>2</mn><mi>π</mi><mover><mi>ν</mi><mo>‾</mo></mover><mi>δ</mi><mspace width="2pt"/><mi>d</mi><mi>δ</mi></mrow></math>
+<p class=en>P(δ) 간섭도(interferogram, 시간·거리 영역), B(ν̄) 스펙트럼(진동수 영역). 앞 식이 Fourier 변환, 뒤 식이 역변환이다. 컴퓨터가 간섭도를 스펙트럼으로 바꾼다.</p>
+<math display=block><mrow><mtext>분해능 </mtext><mi mathvariant="normal">Δ</mi><mover><mi>ν</mi><mo>‾</mo></mover><mo>=</mo><msub><mover><mi>ν</mi><mo>‾</mo></mover><mn>2</mn></msub><mo>−</mo><msub><mover><mi>ν</mi><mo>‾</mo></mover><mn>1</mn></msub><mo>=</mo><mfrac><mn>1</mn><mi>δ</mi></mfrac></mrow></math>
+<p class=en>δ 지연(retardation). 거울을 더 멀리 움직일수록(δ가 클수록) 분해능이 좋아진다.</p></div>
+<div class=fig><img src="assets/ch04/michelson.png"><small>Fig 7-43 Michelson 간섭계. 빔 분할기가 빛을 고정 거울(F)과 움직이는 거울(M)로 나눈다. 돌아온 두 빔이 다시 합쳐져 간섭한다. 지연 δ = 2(M − F). δ가 λ의 정수배면 보강, 반정수배면 상쇄 간섭이다.</small></div>
+<div class=box>
+<math display=block><mrow><mi>f</mi><mo>=</mo><mfrac><mrow><mn>2</mn><msub><mi>v</mi><mi>M</mi></msub></mrow><mi>λ</mi></mfrac><mo>=</mo><mn>2</mn><msub><mi>v</mi><mi>M</mi></msub><mover><mi>ν</mi><mo>‾</mo></mover><mo>=</mo><mfrac><mrow><mn>2</mn><msub><mi>v</mi><mi>M</mi></msub><mi>ν</mi></mrow><mi>c</mi></mfrac></mrow></math>
+<p class=en>f 간섭도 진동수, v<sub>M</sub> 거울 속도. v<sub>M</sub> = 1.5 cm/s면 f = 10⁻¹⁰ν다. 간섭도 진동수는 빛의 진동수에 비례하고 비례상수가 매우 작다. 그래서 너무 빨라 직접 잴 수 없는 IR·가시광 신호를 같은 모양의 <b>가청 주파수 신호</b>로 바꿔 기록할 수 있다.</p></div>
+<div class=fig><img src="assets/ch04/interferogram.png"><small>Fig 7-44 단색광(a~c)은 사인파 간섭도, 두 파장(d~f)은 맥놀이, 넓은 띠(g~i)는 δ = 0(중심 폭발, centerburst)에서 크고 양쪽으로 빠르게 줄어드는 간섭도를 만든다.</small></div>
+<div class=sub>거울 구동 장치 <small>p.19~21</small></div>
+<ul>
+<li>만족스러운 간섭도를 얻으려면 움직이는 거울이 일정한 속도로 움직이고 위치를 매 순간 정확히 알아야 한다. 이동 거리 1~20 cm, 주사 속도 0.01~10 cm/s.</li>
+<li>추가로 두 가지가 필요하다. ① 정확히 같은 지연 간격으로 간섭도를 표본 추출하는 방법: <b>He-Ne 레이저(633 nm)</b> 간섭계의 무늬 신호로 정한다. ② 신호 평균을 위해 <b>지연 0 지점</b>을 정확히 찾는 방법: 백색광 간섭계로 정한다.</li>
+<li>He-Ne 레이저에서 λ/4 = 0.63/4 ≈ 0.16 μm가 거울 이동 d다(보강→상쇄 전환).</li>
+</ul>
+<div class=fig><img src="assets/ch04/drive_signals.png" style="width:56%"><small>Fig 16-5 A IR 신호, B 백색광 신호(지연 0 표시), C 레이저 무늬 기준 신호, D 레이저에서 만든 사각파(표본 추출 간격).</small></div>
+</div>
+
+<div class=sec><div class=bar>4-10. FT-IR 설계와 성능 <small>p.22~25</small></div>
+<ul>
+<li>단일 빔 FT-IR: 바탕(공기, 용매)과 시료 스펙트럼을 따로 저장하고 컴퓨터로 비를 구한다(Fig 16-8).</li>
+<li>이중 빔 FT-IR: 간섭계를 나온 빔을 시료와 기준 쪽으로 번갈아 보낸다(Fig 16-9).</li>
+</ul>
+<div class=fig><img src="assets/ch04/single_double.png" style="width:84%"><small>Fig 16-10 단일 빔 모드에서는 대기 H₂O, CO₂ 흡수가 보이지만 이중 빔 모드에서는 상쇄된다.</small></div>
+<ul>
+<li>가장 싼 기기 성능: 분해능 4 cm⁻¹, 파수 범위 7800~350 cm⁻¹(1.3~29 μm), 주사 시간 1초.</li>
+<li>FT 분광기 장점: 좋은 분산형보다 S/N이 보통 한 자릿수 이상 높다. 몇 초 안에 좋은 스펙트럼. 분해능 &lt;0.1 cm⁻¹. 정확하고 재현성 있는 진동수. 에너지 처리량이 1~2 자릿수 크다(분산형은 좁은 슬릿이 처리량을 제한).</li>
+<li>FT가 특히 유리한 일: 회전·진동 띠가 겹친 기체 혼합물의 고분해능 측정, 흡광도가 큰 시료, 약한 흡수 띠(촉매 표면 흡착물), 빠른 주사(반응속도, 크로마토그래피 유출물), 아주 작은 시료, 반사 스펙트럼, IR 방출 연구.</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>4-11. 분산형과 비분산형 기기 <small>p.26~29</small></div>
+<div class=fig><img src="assets/ch04/dispersive.png" style="width:84%"><small>Fig 16-11 이중 빔 분산형 IR: 초퍼가 기준·시료 빔을 번갈아 보내고, 감쇠기(attenuator)가 기준 빔을 줄여 두 빔이 같아지게(광학 영점) 한다. 감쇠기 위치가 투과도다.</small></div>
+<div class=sub>분산형 기기의 세 가지 한계</div>
+<ol>
+<li>감쇠기 응답이 투과도 변화보다 늘 늦다. 신호가 빨리 변하는 곳에서 특히 그렇다.</li>
+<li>감쇠기와 기록계의 기계적 관성 때문에 펜이 실제 투과도를 지나칠(overshoot) 수 있다.</li>
+<li>투과도가 0에 가까우면 검출기에 빛이 거의 없어 영점을 정확히 못 잡는다.</li>
+</ol>
+<div class=fig><img src="assets/ch04/overshoot.png" style="width:66%"><small>Fig 16-12 n-헥산알 스펙트럼의 낮은 %T에서 생긴 overshoot.</small></div>
+<div class=fig><img src="assets/ch04/nondispersive.png"><small>Fig 16-13 휴대용 필터 광도계(가변 광로 기체 셀). Fig 16-14 필터 없는 CO 감시 광도계: 기준·시료 셀을 지난 빛을 CO가 채워진 감지 셀이 흡수하고, 두 셀의 온도·압력 차이를 금속 격막 축전기로 잰다. Fig 16-15 CO₂용 필터 상관 분석기(N₂/CO₂ 기체 필터 바퀴).</small></div>
+</div>
+
+<div class=sec><div class=bar>4-12. IR 광원과 변환기 <small>p.30~31</small></div>
+<p>광원은 전기로 <b>1500~2200 K</b>로 가열한 불활성 고체이며 연속 복사를 낸다.</p>
+<table><tr><th>광원</th><th>특징</th></tr>
+<tr><td>Nernst glower</td><td>희토류 산화물 원통(지름 1~3 mm, 길이 2~5 cm). 약 2200 K에서 1~2 μm 근처 최대(Fig 16-16).</td></tr>
+<tr><td>Globar</td><td>탄화규소(SiC) 막대(길이 5 cm, 지름 5 mm), 1300~1500 K.</td></tr>
+<tr><td>백열 전선</td><td>니크롬선 나선, 약 1100 K. 세기는 낮지만 수명이 길다.</td></tr>
+<tr><td>수은 아크</td><td>원적외(λ &gt; 50 μm).</td></tr>
+<tr><td>텅스텐 램프</td><td>근적외 4000~12,800 cm⁻¹.</td></tr>
+<tr><td>CO₂ 레이저</td><td>900~1100 cm⁻¹ 띠. 대기 오염물 감시, 수용액 속 흡수 화학종 정량.</td></tr></table>
+<table><tr><th>변환기</th><th>특징</th></tr>
+<tr><td>초전기 (pyroelectric)</td><td>황산 트라이글리신(DTGS). 응답이 빨라 간섭계의 시간 영역 신호를 따라간다. 중적외 FT-IR 대부분에 쓴다.</td></tr>
+<tr><td>광전도 (photoconducting)</td><td>PbS, MCT(수은-카드뮴 텔루라이드), InSb 반도체 박막. <b>PbS</b>: 근적외 10,000~333 cm⁻¹에 가장 많이 쓰고 상온 작동. <b>MCT</b>: DTGS보다 빠르고 감도가 높다. 중·원적외용이며 열잡음을 줄이려고 <b>액체 질소(77 K)로 냉각</b>한다.</td></tr>
+<tr><td>열 변환기 (thermal)</td><td>옛 분산형 기기에서 가장 짧은 IR 파장을 빼고 모두 검출했다.</td></tr></table>
+</div>
+
+<div class=sec><div class=bar>4-13. 시료 처리 <small>p.34~37</small></div>
+<ul>
+<li><b>기체</b>: 끓는점 낮은 액체나 기체를 진공 원통형 셀에 퍼지게 해서 잰다. 광로 몇 cm~10 cm 이상.</li>
+<li><b>용액</b>: IR에서 투명한 용매가 적어 제한된다. <b>물과 알코올은 쓰기 어렵다</b>(강한 O−H 흡수, 그리고 NaCl·KBr 창을 녹인다).</li>
+</ul>
+<div class=fig><img src="assets/ch04/ir_solvents.png"><small>Fig 17-1 IR 용매의 쓸 수 있는 영역(가로선). Fig 17-2 물과 수용성 아스피린 수용액의 IR. 물의 흡수가 커서 차이 스펙트럼으로만 아스피린 띠를 본다.</small></div>
+<ul>
+<li>액체 셀 광로 <b>0.01~1 mm</b>, 시료 농도 <b>0.1~10%</b>.</li>
+</ul>
+<div class=fig><img src="assets/ch04/cells.png"><small>Fig 17-3 분해 가능한 액체 셀. Table 17-2 창 재료: NaCl 40,000~625, KBr 40,000~385, CsI 40,000~200 cm⁻¹. 이들은 물에 잘 녹는다. CaF₂, BaF₂, ZnSe, KRS-5는 물에 거의 안 녹는다.</small></div>
+<div class=sub>간섭 무늬로 셀 광로 구하기 <small>p.36</small></div>
+<div class=two style="align-items:center">
+<div class=box style="margin:0"><math display=block><mrow><mi>b</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>N</mi></mrow><mrow><mn>2</mn><mo>(</mo><msub><mover><mi>ν</mi><mo>‾</mo></mover><mn>1</mn></msub><mo>−</mo><msub><mover><mi>ν</mi><mo>‾</mo></mover><mn>2</mn></msub><mo>)</mo></mrow></mfrac></mrow></math><p class=en>2b = Nλ에서 유도. ΔN 두 파수 사이 무늬 수. 예: ΔN=12, 3230~2080 cm⁻¹이면 b = 0.0052 cm.</p></div>
+<div class=fig style="margin:0"><img src="assets/ch04/fringes.png"></div></div>
+<p class=note>빈 셀에서 두 창 사이 공기층에 반사된 빛이 간섭해 사인파 무늬가 생긴다. 무늬를 세면 광로를 정확히 알 수 있다.</p>
+<div class=sub>고체 <small>p.37</small></div>
+<ul>
+<li>산란을 피하려면 입자를 복사 파장보다 작게 간다. 섬유와 고분자 필름은 그대로 잰다.</li>
+<li><b>KBr 펠렛</b>: 시료와 KBr 가루를 섞어 10,000~15,000 psi로 눌러 투명한 원판을 만든다.</li>
+<li><b>멀(mull)</b>: 투명 용매에 안 녹고 펠렛도 어려운 고체는 2~5 mg 고운 가루(&lt;2 μm)를 무거운 탄화수소 기름(Nujol) 한두 방울과 갈아 반죽으로 만든다.</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>4-14. 정성 분석: 작용기 영역과 지문 영역 <small>p.38~44</small></div>
+<ul>
+<li><b>작용기 영역(group frequency region)</b>: <b>3600~1200 cm⁻¹</b>. 흔한 작용기를 확인한다.</li>
+<li><b>지문 영역(fingerprint region)</b>: <b>1200~600 cm⁻¹</b>. 화합물 전체를 확인한다.</li>
+</ul>
+<p class=why>[보충] 작용기 진동은 분자의 나머지 부분과 거의 짝짓지 않아 어느 분자에서나 비슷한 파수에 나온다. 지문 영역은 C−C, C−O, C−N 단일결합 신축과 굽힘이 분자 골격 전체와 강하게 짝지어 분자마다 고유한 무늬를 낸다. 비슷한 구조도 여기서 구별된다.</p>
+<div class=fig><img src="assets/ch04/group_finger.png"><small>Fig 17-5 탄화수소·알코올·할로젠화물의 스펙트럼. 왼쪽에서 C−H, O−H 신축, 가운데 C−H 굽힘, 오른쪽 C−Cl 신축.</small></div>
+<div class=fig><img src="assets/ch04/table17_3.png"><small>Table 17-3 작용기 진동수. C−H 알케인 2850~2970, 알켄 3010~3095, 알카인 3300, O−H 3590~3650(수소결합 3200~3600 넓음, 카복실산 2500~2700), N−H 3300~3500, C=C 1610~1680, C≡C 2100~2260, C−N 1180~1360, C≡N 2210~2280, C−O 1050~1300, C=O 1690~1760, NO₂ 1500~1570·1300~1370.</small></div>
+<div class=fig><img src="assets/ch04/bruker_chart.png"><small>p.41 작용기별 흡수 영역 도표(Bruker). Fig 17-6 상관 도표(correlation chart)는 원본 p.42~43 참조.</small></div>
+<ul><li>컴퓨터 검색: Sadtler 표준·상업용 IR 모음(1982) 220,000개 스펙트럼으로 미지 스펙트럼과 가장 잘 맞는 것을 찾는다(Fig 17-7).</li></ul>
+</div>
+
+<div class=sec><div class=bar>4-15. 정량 분석 <small>p.45~48</small></div>
+<ul>
+<li>IR에서는 Beer 법칙의 기기적 편차가 UV-vis보다 흔하다. IR 흡수 띠가 좁기 때문이다.</li>
+<li>분산형에서는 광원 세기와 검출기 감도가 낮아 단색화 장치 슬릿을 넓게 써야 한다(다색광 편차).</li>
+<li>흡광도 A = log(P<sub>solvent</sub>/P<sub>solution</sub>).</li>
+<li>셀-인 셀-아웃(cell-in-cell-out): 기준 P<sub>r</sub>에 대해 T₀ = P₀/P<sub>r</sub>, T<sub>s</sub> = P/P<sub>r</sub>를 재고 T = T<sub>s</sub>/T₀ = P/P₀로 용매·셀의 산란과 흡수를 보정한다.</li>
+</ul>
+<div class=two style="align-items:center">
+<div><p><b>기준선법(baseline method)</b>: 봉우리 양쪽 어깨를 잇는 직선을 기준선으로 긋는다. 봉우리 위치에서 기준선의 %T가 T₀, 봉우리 바닥이 T<sub>s</sub>다.</p>
+<math display=block><mrow><mi>A</mi><mo>=</mo><mi>log</mi><mfrac><msub><mi>T</mi><mn>0</mn></msub><msub><mi>T</mi><mi>s</mi></msub></mfrac><mo>=</mo><mi>log</mi><mfrac><msub><mi>P</mi><mn>0</mn></msub><mi>P</mi></mfrac></mrow></math></div>
+<div class=fig style="margin:0"><img src="assets/ch04/baseline.png"><small>Fig 17-9</small></div></div>
+<div class=fig><img src="assets/ch04/xylene.png"><small>Fig 17-10 사이클로헥세인 속 C₈H₁₀ 이성질체(o-, m-, p-자일렌, 에틸벤젠)는 12~15 μm에서 서로 다른 띠로 구별해 정량한다. Table 17-4 공기 오염물 정량 예(상대오차 0.2~1.8%).</small></div>
+<ul>
+<li>공기 오염물 정량(OSHA, Table 17-5): CS₂, 클로로프렌, HCN, 피리딘, SO₂, 염화 비닐 등을 ppm 이하까지 잰다.</li>
+<li>한계: Beer 법칙에서 자주 벗어나고 스펙트럼이 복잡하다. 띠가 많아 겹칠 확률이 크다. 옛 분산형은 좁은 띠와 미광 때문에 흡광도가 슬릿 폭과 파장 설정에 크게 좌우된다. 광로가 짧은 셀이 다루기 불편하고 불확도를 키운다.</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>4-16. 반사 분광법 <small>p.49~52</small></div>
+<p>고분자 필름·섬유, 식품, 고무, 농산물처럼 다루기 어려운 고체 시료에 쓴다. 반사에는 정반사(specular), 확산 반사(diffuse), 내부 반사(internal), 감쇠 전반사(ATR)가 있다.</p>
+<div class=fig><img src="assets/ch04/reflection_types.png"><small>p.49 (a) 광음향 (b·c) 외부 반사 (d) 내부 반사 (e) ATR (f) 확산 반사 (g) 방출 (h) 투과 (i) 정반사.</small></div>
+<div class=sub>확산 반사(DRIFTS) <small>p.50~51</small></div>
+<ul>
+<li>가루 시료를 거의 준비 없이 바로 재는 효율적인 방법이다. 원래 상태 그대로 IR 데이터를 얻어 시간이 절약된다.</li>
+</ul>
+<div class=box><math display=block><mrow><mi>f</mi><mo>(</mo><msubsup><mi>R</mi><mi>∞</mi><mo>′</mo></msubsup><mo>)</mo><mo>=</mo><mfrac><msup><mrow><mo>(</mo><mn>1</mn><mo>−</mo><msubsup><mi>R</mi><mi>∞</mi><mo>′</mo></msubsup><mo>)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><msubsup><mi>R</mi><mi>∞</mi><mo>′</mo></msubsup></mrow></mfrac><mo>=</mo><mfrac><mi>k</mi><mi>s</mi></mfrac><mspace width="10pt"/><mi>k</mi><mo>=</mo><mn>2.303</mn><mi>ε</mi><mi>c</mi></mrow></math>
+<p class=en>Kubelka-Munk 식. R′<sub>∞</sub> 시료와 비흡수 표준(곱게 간 KCl)의 반사 세기 비, k 몰흡수계수(농도에 비례), s 산란계수. f(R′<sub>∞</sub>)가 농도에 비례해 정량에 쓴다.</p></div>
+<div class=fig><img src="assets/ch04/drift.png"><small>Fig 17-11 타원 거울로 확산 반사광을 모으는 장치. Fig 17-12 카바졸의 흡수 스펙트럼(a)과 확산 반사 스펙트럼(b)은 거의 같다.</small></div>
+</div>
+
+<div class=sec><div class=bar>4-17. ATR(감쇠 전반사)<span class=jb>족보</span> <small>p.52~54</small></div>
+<ul>
+<li>용해도가 낮은 고체, 필름, 실, 반죽, 접착제, 가루처럼 다루기 어려운 시료의 IR을 얻는다.</li>
+<li>시료를 굴절률이 높은 내부 반사 결정에 붙인다. 결정 재료: KRS-5, AgCl, ZnSe, Ge, Si, Irtran.</li>
+<li>빛이 결정 안에서 여러 번 내부 반사한 뒤 검출기로 간다. 반사할 때마다 빛 일부가 시료 속으로 조금 스며들었다가(소멸파, evanescent wave) 흡수되어 감쇠한다.</li>
+</ul>
+<div class=fig><img src="assets/ch04/atr.png"><small>Fig 17-13 (a) 고굴절 결정 위아래의 시료 (b) 입사각을 바꿀 수 있는 ATR 부착 장치.</small></div>
+<div class=box><math display=block><mrow><msub><mi>d</mi><mi>p</mi></msub><mo>=</mo><mfrac><msub><mi>λ</mi><mi>c</mi></msub><mrow><mn>2</mn><mi>π</mi><msup><mrow><mo>[</mo><msup><mi>sin</mi><mn>2</mn></msup><mi>θ</mi><mo>−</mo><msup><mrow><mo>(</mo><msub><mi>n</mi><mi>s</mi></msub><mo>/</mo><msub><mi>n</mi><mi>c</mi></msub><mo>)</mo></mrow><mn>2</mn></msup><mo>]</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mfrac></mrow></math>
+<p class=en>d<sub>p</sub> 유효 침투 깊이, λ<sub>c</sub> 결정 속 파장(λ/n<sub>c</sub>), θ 입사각, n<sub>s</sub> 시료 굴절률, n<sub>c</sub> 결정 굴절률. 전반사가 일어나려면 n<sub>c</sub> &gt; n<sub>s</sub>이고 θ가 임계각보다 커야 한다.</p></div>
+<p class=why>[보충] 침투 깊이는 파장에 비례하고 수 μm 정도다. 그래서 ATR은 표면 근처만 보고, 장파장(낮은 파수) 띠가 투과 스펙트럼보다 상대적으로 세게 나온다. θ를 키우거나 n<sub>c</sub>가 큰 결정(Ge)을 쓰면 더 얕은 곳을 본다.</p>
+<div class=fig><img src="assets/ch04/ptt_atr.png"><small>p.53 PTT(폴리트라이메틸렌 테레프탈레이트) 필름의 편광 ATR 스펙트럼(TE, TM). 편광 방향에 따른 띠 세기 차이로 사슬 배향을 분석한다.</small></div>
+<div class=sub>반사 흡수 분광법(RAS)과 PU 반응 <span class=jb>족보</span> <small>p.54</small></div>
+<div class=fig><img src="assets/ch04/ras_pu.png"><small>p.54 금속 기판 위 프리폴리머를 가열하며 시간에 따라 IR을 잰다. N=C=O 신축 띠(약 2270 cm⁻¹)가 시간이 갈수록 줄어든다. 아래 반응식: 이소시아네이트 → 아민 → 우레아 → 뷰렛.</small></div>
+<ol class=step>
+<li>R−N=C=O + H₂O → R−NH₂ + CO₂ (이소시아네이트가 물과 반응해 <b>아민</b>과 CO₂가 생긴다)</li>
+<li>R−NH₂ + OCN−R′ → R−NH−CO−NH−R′ (<b>우레아</b> 결합)</li>
+<li>우레아 N−H + OCN−R″ → <b>뷰렛</b>(가교)</li>
+</ol>
+<p class=note>[보충] 폴리우레탄(PU) 기본 반응: R−N=C=O + HO−R′ → R−NH−CO−O−R′(<b>우레탄</b> 결합). 다이아이소시아네이트(예: MDI)와 다이올(예: PPG, 폴리올)이 반복해서 반응해 사슬이 자란다. IR로 반응을 추적할 때는 N=C=O 띠(약 2270 cm⁻¹)가 사라지고, 우레탄·우레아의 N−H 신축(약 3300 cm⁻¹), C=O 신축(우레탄 약 1700~1730, 우레아 약 1640~1660 cm⁻¹), N−H 굽힘+C−N 신축(아마이드 II, 약 1530 cm⁻¹)이 커지는 것을 본다.</p>
+</div>
+
+<div class=sec><div class=bar>4-18. 광음향 IR(PAS) <small>p.55~56</small></div>
+<ul>
+<li>고체, 반고체, 탁한 액체의 UV, 가시, IR 흡수 스펙트럼을 얻는다. 이런 시료는 빛의 산란과 반사 때문에 보통 방법으로는 매우 어렵거나 불가능하다.</li>
+<li>광음향 효과: 1880년대 <b>A. G. Bell</b>이 처음 연구했다. 닫힌 셀 속 기체에 그 기체가 흡수하는 파장의 빛을 초퍼로 끊어 비춘다. 흡수한 빛이 기체를 주기적으로 가열해 압력이 규칙적으로 요동친다. 끊는 속도가 <b>가청 주파수(20~20,000 Hz)</b>면 민감한 마이크로 압력 펄스를 검출한다.</li>
+</ul>
+<div class=fig><img src="assets/ch04/photoacoustic.png"><small>Fig 17-14 FT-IR용 광음향 부착 장치(시료, 창, 마이크). Fig 17-15 가루 석탄과 압출 고분자 펠렛의 광음향 스펙트럼.</small></div>
+</div>
+
+<div class=sec><div class=bar>4-19. 근적외·원적외·방출·현미경 <small>p.57~58</small></div>
+<ul>
+<li><b>NIR</b>: 770~2500 nm(13,000~4000 cm⁻¹). 3000~1700 cm⁻¹ 기본 신축 진동의 배음과 결합음이 흡수 띠다. 관여하는 결합은 <b>C−H, N−H, O−H</b>다. 농업, 식품, 석유, 화학 산업에서 물, 단백질, 저분자 탄화수소, 지방을 일상적으로 정량한다. 확산 반사와 투과를 모두 쓰지만 확산 반사가 훨씬 많다.</li>
+</ul>
+<div class=fig><img src="assets/ch04/nir.png"><small>Fig 17-16 NIR 용매(1 cm 셀에서 투명한 범위). Fig 17-17 밀 시료의 확산 반사 NIR 스펙트럼(log 1/R).</small></div>
+<ul>
+<li><b>원적외(Far-IR)</b>: 금속 원자와 무기·유기 리간드 사이 결합의 신축·굽힘이 <b>650 cm⁻¹ 아래</b>(&gt;15 μm)에 나와 무기물 연구에 특히 쓸모 있다.</li>
+<li><b>IR 방출</b>: IR을 흡수하는 분자는 가열하면 특유 파장을 낸다. 시료가 주변보다 조금만 더 뜨거우면 S/N이 나빠 분석 응용이 제한된다. 예: 화성 탐사선 Spirit의 열방출 스펙트럼(Fig 17-8).</li>
+<li><b>IR 현미경</b>: 크기 10~500 μm 시료의 흡수·반사 스펙트럼을 얻는다.</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>헷갈리는 짝</div>
+<table>
+<tr><th>구별 기준</th><th>A</th><th>B</th></tr>
+<tr><td>파수 영향</td><td>k 클수록: 높음(C≡C 2150)</td><td>μ 클수록: <b>낮음</b>(C−Cl 800)</td></tr>
+<tr><td>진동 수</td><td>선형: 3N−5</td><td>비선형: 3N−6</td></tr>
+<tr><td>띠 증가</td><td>배음: 기본의 2·3배</td><td>결합음: 두 기본의 합·차</td></tr>
+<tr><td>영역</td><td>작용기: 3600~1200, 작용기 확인</td><td>지문: 1200~600, <b>화합물</b> 확인</td></tr>
+<tr><td>파장 분리</td><td>분산형: 회절발, 슬릿</td><td>FT: 간섭계, 슬릿 없음, 동시 측정</td></tr>
+<tr><td>FT 이점</td><td>Jacquinot: 처리량</td><td>Fellgett: 다중화(동시)</td></tr>
+<tr><td>간섭계 기준</td><td>He-Ne 레이저: 표본 간격</td><td>백색광: 지연 0 지점</td></tr>
+<tr><td>검출기</td><td>DTGS: 상온, 빠름</td><td>MCT: <b>77 K 냉각</b>, 더 빠르고 민감</td></tr>
+<tr><td>반사</td><td>DRIFTS: 가루, Kubelka-Munk</td><td>ATR: 고굴절 결정, 표면 수 μm</td></tr>
+<tr><td>NIR vs FIR</td><td>NIR: C−H, N−H, O−H 배음</td><td>FIR: 금속-리간드, &lt;650 cm⁻¹</td></tr>
+<tr><td>고체 시료</td><td>KBr 펠렛: 압축 원판</td><td>멀: Nujol 반죽</td></tr>
+</table></div>
+
+<div class=sec><div class=sub>확인 질문</div>
+<ol class=q>
+<li>분자가 IR을 흡수하는 조건과, O₂·N₂가 흡수하지 않는 이유는? → 4-2</li>
+<li>신축·굽힘 진동의 종류 여섯 가지는? → 4-3</li>
+<li>Hooke 법칙으로 ν̄ = 5.3×10⁻¹²√(k/μ)를 쓰고 C=O 파수를 단위까지 맞춰 계산하면? → 4-4, 4-5</li>
+<li>3N−6으로 예상한 것보다 띠가 적거나 많은 이유는? → 4-6</li>
+<li>FT-IR이 분산형보다 나은 이유(처리량, 동시 측정, 분해능)와 He-Ne 레이저의 역할은? → 4-8, 4-9</li>
+<li>ATR 원리와 침투 깊이 식의 의미, PU 반응을 IR로 추적할 때 보는 띠는? → 4-17</li>
+</ol></div>
+
+</div>
+<script src=paginate.js></script>
+</body></html>

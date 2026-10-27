@@ -20,8 +20,18 @@
   function place(el){
     cols.appendChild(el);
     if(!over(cols)) return;
-    // 목록이면 항목을 나눠서 넣는다
-    if(el.tagName==='UL'||el.tagName==='OL'){
+    // 그림이면 원래 크기의 60%까지 줄여서 넣어 본다
+    if(el.classList.contains('fig')){
+      const img=el.querySelector('img');
+      if(img){
+        const w0=img.getBoundingClientRect().width, orig=img.style.width;
+        for(let f=0.95;f>=0.6&&over(cols);f-=0.05) img.style.width=(w0*f)+'px';
+        if(!over(cols)) return;
+        img.style.width=orig;
+      }
+    }
+    // 목록이면 항목을 나눠서 넣는다 (확인 질문 목록은 통째로 옮긴다)
+    if((el.tagName==='UL'||el.tagName==='OL')&&!el.classList.contains('q')){
       const lis=Array.from(el.children);el.innerHTML='';
       let cur=el,moved=false;
       for(const li of lis){

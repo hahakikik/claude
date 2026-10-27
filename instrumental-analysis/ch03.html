@@ -1,0 +1,267 @@
+<!doctype html><html lang=ko><meta charset=utf-8><title>3장 분자 발광 총정리</title>
+<link rel=stylesheet href=style.css>
+<body>
+<div id=src data-title="3장 분자 발광분광법 총정리" data-sub="기기분석 · Chap 15 · 교재 슬라이드 기준" data-foot="출처: 교재 슬라이드 Chap 15(p.N은 PDF 쪽) · 녹음 없음 · 족보 주제 반영 · [보충]은 슬라이드 밖 교재 수준 설명">
+
+<div class=sec><div class=bar>3-1. 발광법 개요<span class=jb>족보</span> <small>p.3~5</small></div>
+<ul>
+<li>발광법(luminescence)은 분석물 분자를 들뜨게 해 그 방출 스펙트럼으로 정성·정량 정보를 얻는다. 형광, 인광, 화학발광이 있다.</li>
+<li>가장 큰 장점은 <b>감도</b>다. 검출한계가 흡수법보다 보통 <b>1~3 자릿수 낮다</b>.</li>
+<li>단점은 적용 범위다. UV-vis를 흡수하는 화학종보다 발광하는 화학종이 훨씬 적어서 흡수법보다 덜 널리 쓰인다.</li>
+</ul>
+<div class=sub>광발광(photoluminescence) <small>p.4</small></div>
+<ul>
+<li><b>형광과 인광을 합쳐 광발광</b>이라 한다. 둘 다 <b>광자를 흡수</b>해서 들뜬다는 점이 같다.</li>
+<li>대부분 들뜸 빛보다 <b>긴 파장</b>에서 발광한다.</li>
+<li>형광에 관여하는 들뜬 상태는 수명이 짧다(&lt;10⁻⁵ s).</li>
+</ul>
+<div class=sub>화학발광(chemiluminescence) <small>p.4</small></div>
+<ul>
+<li>화학 반응 중 생긴 들뜬 화학종이 빛을 내는 현상이다. 빛을 쪼이지 않는다.</li>
+<li>분석물과 시약(보통 오존, 과산화수소 같은 강한 산화제)의 반응 생성물이 들뜬 화학종이 되기도 한다.</li>
+<li>분석물이 직접 관여하지 않고 화학발광 반응을 억제하거나 촉매하기도 한다.</li>
+</ul>
+<div class=sub>공명 형광과 Stokes 이동 <small>p.5</small></div>
+<ul>
+<li>원자 형광(AFS) 예: Na 증기의 3s 전자가 589.6·589.0 nm를 흡수해 3p로 간다. 약 10⁻⁸ s 뒤 같은 두 파장을 모든 방향으로 내며 돌아온다. 이것이 <b>공명 형광(resonance fluorescence)</b>이다.</li>
+<li>분자 형광·인광 띠는 공명선보다 긴 파장에 중심이 있다. 이 장파장 쪽 이동을 <b>Stokes 이동(Stokes shift)</b>이라 한다.</li>
+</ul>
+<p class=why>들뜬 분자는 빛을 내기 전에 진동 이완으로 에너지 일부를 열로 잃고 S₁의 가장 낮은 진동 준위로 내려온다. 그래서 내놓는 광자의 에너지가 흡수한 광자보다 작아 파장이 길다.</p>
+</div>
+
+<div class=sec><div class=bar>3-2. 전자 스핀과 단일항·삼중항 <small>p.6~8</small></div>
+<ul>
+<li>형광과 인광의 차이는 <b>전자 스핀</b>, 즉 단일항(singlet)과 삼중항(triplet) 들뜬 상태의 차이에서 온다.</li>
+<li><b>Pauli 배타 원리</b>: 한 원자 안 두 전자는 네 양자수(주, 방위, 자기, 스핀 양자수)가 모두 같을 수 없다. 한 오비탈에는 전자가 둘까지 들어가고 스핀이 반대다(짝지은 스핀).</li>
+<li><b>반자성(diamagnetic)</b>: 스핀이 짝지어 알짜 자기장이 없다. 정자기장에 끌리지도 밀리지도 않는다. 대부분 분자가 그렇다.</li>
+<li><b>상자성(paramagnetic)</b>: 짝짓지 않은 전자가 있는 자유 라디칼은 자기 모멘트가 있어 자기장에 끌린다.</li>
+</ul>
+<table><tr><th>상태</th><th>뜻</th></tr>
+<tr><td>Singlet</td><td>모든 전자 스핀이 짝지은 상태. 자기장에서 준위가 갈라지지 않는다. 짝짓지 않은 전자 0개.</td></tr>
+<tr><td>Doublet</td><td>자유 라디칼의 바닥 상태. 홀전자가 자기장에서 두 방향을 가질 수 있어 에너지가 조금 다른 두 상태가 된다.</td></tr>
+<tr><td>Triplet</td><td>한 쌍 중 전자 하나가 들뜨면서 스핀이 <b>평행</b>해진 상태. 짝짓지 않은 전자 2개.</td></tr></table>
+<div class=fig><img src="assets/ch03/spin_states.png"><small>Fig 15-1 (a) 바닥 단일항 (b) 들뜬 단일항: 스핀 반대 유지 (c) 들뜬 삼중항: 스핀 평행.</small></div>
+<ul>
+<li>삼중항 분자는 상자성, 단일항 분자는 반자성이다.</li>
+<li>단일항→삼중항 전이 확률은 단일항→단일항보다 훨씬 작다. 그래서 흡수 띠 세기도 훨씬 작다.</li>
+<li>평균 수명: 들뜬 삼중항 <b>10⁻⁵~수 초</b>, 들뜬 단일항 <b>약 10⁻⁸ s</b>.</li>
+</ul>
+<p class=note>[보충] 들뜬 삼중항(T₁)은 같은 배치의 들뜬 단일항(S₁)보다 에너지가 낮다(Hund 규칙). 그래서 인광은 형광보다 더 긴 파장에서 나온다.</p>
+</div>
+
+<div class=sec><div class=bar>3-3. 에너지 준위도(Jablonski)와 속도 <small>p.9~10</small></div>
+<div class=fig><img src="assets/ch03/jablonski.png"><small>Fig 15-2 광발광계의 부분 에너지 준위도. 흡수(λ₁, λ₂) 뒤 진동 이완, 내부 전환으로 S₁ 바닥 진동 준위에 모인다. S₁→S₀ 형광(λ₃), S₁→T₁ 계간 전이, T₁→S₀ 인광(λ₄). λ₁에서 흡수해 같은 λ₁′으로 내는 것이 공명 형광이다.</small></div>
+<table><tr><th>과정</th><th>속도(시간 척도)</th></tr>
+<tr><td>광자 흡수</td><td><b>10⁻¹⁴~10⁻¹⁵ s</b></td></tr>
+<tr><td>진동 이완</td><td>10⁻¹² s 이하</td></tr>
+<tr><td>형광 방출</td><td><b>10⁻⁵~10⁻¹⁰ s</b></td></tr>
+<tr><td>인광 방출</td><td><b>10⁻⁴~10 s 이상</b>. 삼중항→단일항 전이가 단일항→단일항보다 느리다(스핀 금지).</td></tr></table>
+<p class=note>1장(p.48)은 형광이 "약 10⁻⁵ s 안에 끝난다", 이 장은 "10⁻⁵~10⁻¹⁰ s"로 적었다. 모순은 아니다. 범위로 외운다.</p>
+</div>
+
+<div class=sec><div class=bar>3-4. 탈활성화 과정<span class=jb>족보</span> <small>p.11~15</small></div>
+<p>들뜬 분자는 여러 단계를 거쳐 바닥 상태로 돌아간다. <b>빛을 내는 과정</b>은 형광과 인광이다. <b>비복사 과정(radiationless)</b>은 진동 이완, 내부 전환, 외부 전환, 계간 전이다. 가장 빠른 경로가 우세하다.</p>
+<table><tr><th>과정</th><th>내용</th></tr>
+<tr><td>진동 이완 (vibrational relaxation)</td><td>들뜬 분자가 용매 분자와 충돌해 진동 에너지를 빠르게 넘긴다. 용매 온도는 아주 조금 오른다. 진동 들뜬 분자의 평균 수명은 <b>10⁻¹² s 이하</b>다. 같은 전자 상태 안에서 가장 낮은 진동 준위로 내려간다.</td></tr>
+<tr><td>내부 전환 (internal conversion)</td><td>빛을 내지 않고 <b>같은 다중도</b>(단일항-단일항, 삼중항-삼중항)의 낮은 전자 상태로 넘어간다. 두 상태의 진동 준위가 겹칠 때 잘 일어나며, 높은 들뜬 상태에서는 형광보다 내부 전환이 더 잘 일어난다.</td></tr>
+<tr><td>외부 전환 (external conversion, 충돌 소광)</td><td>들뜬 분자가 용매나 다른 용질과 상호작용해 에너지를 넘긴다.</td></tr>
+<tr><td>계간 전이 (intersystem crossing)</td><td><b>다른 다중도</b>의 상태로 넘어간다. 가장 흔한 것은 S₁→T₁이다. 두 상태의 진동 준위가 겹치면 잘 일어난다. I, Br 같은 무거운 원자가 있으면 커진다(<b>중원자 효과</b>).</td></tr>
+<tr><td>인광 (phosphorescence)</td><td>계간 전이로 T₁에 간 뒤 빛을 내며 S₀로 돌아간다. T₁ 수명 10⁻⁴~10 s 이상. 내부·외부 전환과 경쟁에서 지기 쉬워 보통 <b>저온, 점성이 큰 매질</b>에서만 관찰된다.</td></tr></table>
+<p class=why>[보충] 중원자는 스핀-궤도 짝지음을 키워 스핀이 바뀌는 전이(S₁→T₁)의 금지를 완화한다. 그래서 계간 전이가 늘고 형광은 줄고 인광은 늘어난다.</p>
+<div class=two style="align-items:center">
+<div class=fig style="margin:0"><img src="assets/ch03/quinine.png"><small>Fig 15-3 퀴닌: 들뜸 파장(250 또는 350 nm)과 상관없이 최대 방출은 <b>450 nm</b>다. 높은 상태로 들떠도 내부 전환으로 S₁에 내려온 뒤 형광을 내기 때문이다.</small></div>
+<div class=fig style="margin:0"><img src="assets/ch03/isc_curve.png"><small>p.15 퍼텐셜 곡선. 들뜬 전자가 진동 준위가 겹치는(같은 에너지) 지점에서 다중도가 다른 상태로 계간 전이한다.</small></div></div>
+<div class=sub>선해리(predissociation)와 해리 <small>p.12</small></div>
+<ul>
+<li><b>선해리</b>: 높은 전자 상태에서 낮은 전자 상태의 높은 진동 준위로 내부 전환한다. 그 진동 에너지가 결합을 끊을 만큼 크면 결합이 끊어진다. 큰 분자에서 흔하다. 발색단이 흡수한 에너지가 내부 전환으로 약한 결합의 진동 에너지가 되어 그 결합이 끊어질 수 있다.</li>
+<li><b>해리(dissociation)</b>: 내부 전환 없이 흡수한 빛이 발색단 전자를 결합이 끊어질 만큼 높은 진동 준위로 바로 들뜨게 한다.</li>
+</ul>
+<p class=note>슬라이드는 내부 전환을 "Intermolecular processes"로 적었지만, 문맥상 분자 내(intramolecular) 과정이다. 오타로 보인다.</p>
+</div>
+
+<div class=sec><div class=bar>3-5. 양자효율<span class=jb>족보</span> <small>p.16~17</small></div>
+<p>양자 수득률(quantum yield), 양자효율(quantum efficiency)은 발광한 분자 수를 들뜬 분자 전체 수로 나눈 비다. 형광이 아주 센 플루오레세인은 거의 1이다. 형광이 없는 화학종은 사실상 0이다.</p>
+<div class=box><math display=block><mrow><mi>φ</mi><mo>=</mo><mfrac><msub><mi>k</mi><mi>f</mi></msub><mrow><msub><mi>k</mi><mi>f</mi></msub><mo>+</mo><msub><mi>k</mi><mi>i</mi></msub><mo>+</mo><msub><mi>k</mi><mtext>ec</mtext></msub><mo>+</mo><msub><mi>k</mi><mtext>ic</mtext></msub><mo>+</mo><msub><mi>k</mi><mtext>pd</mtext></msub><mo>+</mo><msub><mi>k</mi><mi>d</mi></msub></mrow></mfrac></mrow></math>
+<p class=en>k<sub>f</sub> 형광, k<sub>i</sub> 계간 전이, k<sub>ec</sub> 외부 전환, k<sub>ic</sub> 내부 전환, k<sub>pd</sub> 선해리, k<sub>d</sub> 해리의 속도상수.</p></div>
+<p class=why>φ는 형광 속도가 모든 탈활성화 속도의 합에서 차지하는 몫이다. k<sub>f</sub>를 키우거나 나머지 k를 줄이는 구조와 환경이 형광을 세게 한다. 아래 3-6의 모든 요인이 이 식의 어느 항을 바꾸는지로 설명된다.</p>
+<div class=sub>전이 형식과 형광 <small>p.16~17</small></div>
+<ul>
+<li>250 nm보다 짧은 UV(약 140 kcal/mol)로는 형광이 거의 나오지 않는다. 그 에너지가 선해리나 해리로 들뜬 상태를 없애기 때문이다.</li>
+<li>그래서 형광은 에너지가 낮은 <b>π*→π, π*→n</b> 전이에 한정된다. 가장 흔한 형광은 첫 들뜬 전자 상태의 가장 낮은 진동 준위에서 나온다.</li>
+<li>형광은 가장 낮은 전이가 <b>π→π*</b>인 화합물에서 n→π*인 화합물보다 흔하다.</li>
+</ul>
+<p class=why>π,π* 상태의 양자효율이 큰 이유 세 가지. ① π→π* 몰흡광계수가 n→π*보다 100~1000배 크다. ② 고유 수명이 짧다(π,π* 10⁻⁷~10⁻⁹ s, n,π* 10⁻⁵~10⁻⁷ s). ③ 그래서 k<sub>f</sub>가 더 크다. 수명이 짧으면 비복사 과정이 끼어들 시간이 적다.</p>
+</div>
+
+<div class=sec><div class=bar>3-6. 형광에 영향을 주는 변수<span class=jb>족보</span> <small>p.17~21</small></div>
+<div class=sub>구조 <small>p.17~18</small></div>
+<ul>
+<li>가장 세고 쓸모 있는 형광은 에너지가 낮은 π→π* 전이를 가진 <b>방향족</b> 작용기 화합물에서 나온다.</li>
+<li>치환되지 않은 방향족 탄화수소는 대부분 용액에서 형광을 낸다. 고리 수와 축합 정도가 클수록 양자효율이 커진다.</li>
+<li>단순 헤테로고리(피리딘, 퓨란, 싸이오펜, 피롤)는 형광이 없다. 벤젠 고리와 축합된 구조(퀴놀린, 아이소퀴놀린, 인돌)는 형광을 낸다.</li>
+<li>벤젠 고리 치환은 흡수 최대 파장과 형광을 함께 옮긴다(Table 15-1).</li>
+</ul>
+<div class=fig><img src="assets/ch03/heterocycle.png"><small>p.17 단순 헤테로고리는 형광 없음, 축합 고리는 형광 있음.</small></div>
+<div class=fig><img src="assets/ch03/table15_1.png" style="width:84%"><small>Table 15-1 벤젠 치환체의 형광. 아이오도·브로모 벤젠은 중원자 효과로 약하다(0, 5). 아닐린(20) → 아닐리늄(0), 페놀(18) → 페놀레이트(10). 나이트로벤젠은 형광이 없다(0).</small></div>
+<div class=sub>구조적 강직성(rigidity) <small>p.19</small></div>
+<div class=two style="align-items:center">
+<div class=fig style="margin:0"><img src="assets/ch03/rigidity.png"><small>플루오렌 ~1.0, 바이페닐 ~0.2. 두 고리를 CH₂로 묶어 고정하면 형광이 세진다.</small></div>
+<div><ul>
+<li>형광은 <b>강직한 구조</b>에서 특히 잘 나온다.</li>
+<li>유기 킬레이트제가 금속 이온과 착물을 만들면 형광이 세진다. 예: 8-하이드록시퀴놀린.</li>
+</ul></div></div>
+<p class=why>강직하지 않은 분자는 부분끼리 자유롭게 진동·회전해 들뜬 에너지를 열로 잃기 쉽다. 즉 내부 전환 속도(k<sub>ic</sub>)가 커져 φ가 줄어든다.</p>
+<div class=sub>온도와 용매 <small>p.20</small></div>
+<ul>
+<li>대부분 분자는 <b>온도가 오르면 형광 양자효율이 줄어든다</b>. 충돌이 잦아져 외부 전환으로 탈활성화될 확률이 커지기 때문이다.</li>
+<li>용매 <b>점도가 낮아져도</b> 외부 전환이 쉬워져 형광이 줄어든다.</li>
+<li>무거운 원자를 가진 용매(CBr₄, 아이오딘화 에틸)도 형광을 줄인다(중원자 효과로 계간 전이 증가).</li>
+</ul>
+<div class=sub>pH <small>p.20</small></div>
+<ul>
+<li>산성·염기성 치환기를 가진 방향족의 형광은 pH에 따라 달라진다. 예: 페놀, 아닐린(Table 15-1).</li>
+</ul>
+<div class=fig><img src="assets/ch03/aniline.png"><small>아닐린의 공명 구조(왼쪽 세 개)와 아닐리늄 이온(오른쪽). 아닐린은 추가 공명 구조가 첫 들뜬 상태를 안정화해 UV 영역 형광을 낸다. 산에서 아닐리늄이 되면 N의 비공유 전자쌍이 없어 공명이 사라지고 형광도 사라진다.</small></div>
+<div class=sub>용존 산소 <small>p.21</small></div>
+<ul><li>녹아 있는 산소는 흔히 형광 세기를 줄인다. 형광 화학종이 광화학적으로 산화되기 때문일 수 있다. [보충] 산소는 상자성이라 계간 전이를 촉진해 형광을 소광하기도 한다.</li></ul>
+<div class=sub>농도와 형광 세기 <small>p.21</small></div>
+<p>형광 세기 F는 시료가 흡수한 들뜸 빛의 복사력에 비례한다.</p>
+<div class=box>
+<math display=block><mrow><mi>F</mi><mo>=</mo><msup><mi>K</mi><mo>′</mo></msup><mo>(</mo><msub><mi>P</mi><mn>0</mn></msub><mo>−</mo><mi>P</mi><mo>)</mo><mo>=</mo><msup><mi>K</mi><mo>′</mo></msup><msub><mi>P</mi><mn>0</mn></msub><mo>(</mo><mn>1</mn><mo>−</mo><msup><mn>10</mn><mrow><mo>−</mo><mi>ε</mi><mi>b</mi><mi>c</mi></mrow></msup><mo>)</mo></mrow></math>
+<math display=block><mrow><mi>F</mi><mo>=</mo><msup><mi>K</mi><mo>′</mo></msup><msub><mi>P</mi><mn>0</mn></msub><mrow><mo>[</mo><mn>2.303</mn><mi>ε</mi><mi>b</mi><mi>c</mi><mo>−</mo><mfrac><msup><mrow><mo>(</mo><mn>2.303</mn><mi>ε</mi><mi>b</mi><mi>c</mi><mo>)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><mo>!</mo></mrow></mfrac><mo>+</mo><mfrac><msup><mrow><mo>(</mo><mn>2.303</mn><mi>ε</mi><mi>b</mi><mi>c</mi><mo>)</mo></mrow><mn>3</mn></msup><mrow><mn>3</mn><mo>!</mo></mrow></mfrac><mo>−</mo><mo>⋯</mo><mo>]</mo></mrow></mrow></math>
+<math display=block><mrow><mi>F</mi><mo>=</mo><mn>2.303</mn><msup><mi>K</mi><mo>′</mo></msup><mi>ε</mi><mi>b</mi><mi>c</mi><msub><mi>P</mi><mn>0</mn></msub><mo>=</mo><mi>K</mi><mi>c</mi><mspace width="8pt"/><mtext>(조건: </mtext><mn>2.303</mn><mi>ε</mi><mi>b</mi><mi>c</mi><mo>=</mo><mi>A</mi><mo>&lt;</mo><mn>0.05</mn><mtext>)</mtext></mrow></math>
+<p class=en>Maclaurin 급수에서 첫 항만 남긴다. 흡광도가 작은 묽은 용액에서만 F가 농도에 직선 비례한다.</p></div>
+<ul>
+<li>농도가 높으면 직선에서 <b>아래로(음의 편차)</b> 벗어난다.</li>
+<li>원인은 <b>1차·2차 흡수, 즉 내부 필터 효과(inner filter effect)</b>다. [보충] 1차 흡수: 용액 앞쪽에서 들뜸 빛이 다 흡수되어 관측하는 가운데 부분까지 빛이 덜 간다. 2차 흡수: 방출한 형광을 다른 분석물 분자가 다시 흡수한다(흡수와 방출 띠가 겹칠 때). 그 밖에 자체 소광(self-quenching, 들뜬 분자끼리 충돌)도 원인이다.</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>3-7. 들뜸·방출 스펙트럼 <small>p.22~24</small></div>
+<ul>
+<li><b>들뜸 스펙트럼(excitation)</b>: 방출 파장을 고정하고 들뜸 파장을 바꿔 형광 세기를 잰다. 흡수 스펙트럼과 거의 같다.</li>
+<li><b>방출 스펙트럼(emission)</b>: 들뜸 파장을 고정하고 방출 파장을 훑는다.</li>
+<li>세 스펙트럼의 파장은 들뜸(흡수) &lt; 형광 &lt; 인광 순이다(Fig 15-5 페난트렌).</li>
+</ul>
+<div class=fig><img src="assets/ch03/phenanthrene.png" style="width:80%"><small>Fig 15-5 페난트렌의 들뜸(E), 형광(F), 인광(P) 스펙트럼. 왼쪽에서 오른쪽으로 갈수록 장파장이다.</small></div>
+<p class=why>[보충] 형광 스펙트럼은 들뜸 스펙트럼과 거울상에 가깝다. 흡수는 S₀ 바닥 진동 준위에서 S₁의 여러 진동 준위로, 형광은 S₁ 바닥 진동 준위에서 S₀의 여러 진동 준위로 가는데 두 상태의 진동 준위 간격이 비슷하기 때문이다.</p>
+<div class=fig><img src="assets/ch03/total_lum.png"><small>Fig 15-6 전체 발광 스펙트럼(total luminescence): 들뜸 파장과 방출 파장 두 축에 세기를 그린 3차원 그림(a)과 등고선 그림(b). 대각선 띠는 산란광이다.</small></div>
+<div class=fig><img src="assets/ch03/synchronous.png"><small>Fig 15-7 동기 형광(synchronous): 들뜸과 방출 단색화 장치를 일정한 파장 차(Δλ)로 함께 훑는다. 테트라센의 여러 봉우리가 하나의 좁은 봉우리(b)가 되어 혼합물 분석에 좋다.</small></div>
+</div>
+
+<div class=sec><div class=bar>3-8. 기기: 형광계와 분광형광계 <small>p.25~31</small></div>
+<div class=fig><img src="assets/ch03/fluorometer_parts.png"><small>Fig 15-8 구성: 광원 → 들뜸 파장 선택기 → 시료 → <b>90° 방향</b>의 방출 파장 선택기 → 변환기. 기준 빔은 감쇠기를 거쳐 기준 변환기로 간다. Fig 15-9 1 ppm 안트라센의 들뜸(a)과 방출(b) 스펙트럼.</small></div>
+<p class=why>[보충] 방출광을 들뜸 빔과 수직으로 받는 이유는 투과하는 들뜸 빛이 검출기에 들어가지 않게 하려는 것이다. 그래서 형광은 어두운 배경 위의 신호를 재게 되고 감도가 높다.</p>
+<table><tr><th>부품</th><th>내용</th></tr>
+<tr><td>광원</td><td>흡수법의 텅스텐·D₂ 램프보다 센 광원을 쓴다. 필터 형광계: 저압 수은등(254, 302, 313, 546, 578, 691, 773 nm 선, 용융 실리카 창). 분광형광계: 75~450 W 고압 <b>Xe 아크 램프</b>(300~1300 nm 연속).</td></tr>
+<tr><td>레이저</td><td>1970년대부터 사용. 가변 색소 레이저, Nd-YAG. 장점: 시료가 μL 이하로 작을 때(미세 크로마토그래피, 모세관 전기영동), 원격 감지(대기 OH 라디칼, 수중 엽록소, 평행광이 중요), 방해 형광을 줄이려고 아주 단색인 들뜸이 필요할 때.</td></tr>
+<tr><td>필터·단색화</td><td>필터 형광계는 간섭·흡수 필터. 분광형광계는 회절발 단색화 장치가 하나 이상, 보통 두 개다.</td></tr>
+<tr><td>변환기</td><td>광전자증배관(PMT)이 가장 흔하다. 광자 계수(photon counting) 방식으로 S/N을 높인다. CCD도 쓴다.</td></tr>
+<tr><td>셀</td><td>원통형·사각형 유리나 실리카. 셀 칸은 산란광이 검출기에 덜 가게 설계한다.</td></tr></table>
+<div class=fig><img src="assets/ch03/fluorometer.png" style="width:80%"><small>Fig 15-10 전형적인 필터 형광계: 1차 필터(들뜸)와 2차 필터(방출), 기준 광전자증배관.</small></div>
+<div class=fig><img src="assets/ch03/spectrofluorometer.png" style="width:80%"><small>Fig 15-11 분광형광계: 들뜸·방출 단색화 장치 두 개, Xe 램프, 기준 PMT.</small></div>
+<ul>
+<li>배열 검출기 분광형광계: CCD로 전체 발광 스펙트럼을 한 번에 얻는다(Fig 15-12).</li>
+<li>광섬유 형광 센서: 레이저 빛이 광섬유로 가서 시료를 들뜨게 하고, 형광이 같은 광섬유로 돌아와 검출기로 간다.</li>
+</ul>
+<div class=two style="align-items:center">
+<div><div class=sub>인광계(phosphorimeter)</div><ul>
+<li>형광계에 두 장치를 더한다.</li>
+<li>① 시료를 번갈아 비추고 적당한 지연 시간 뒤 인광 세기를 재는 장치(회전 셔터). 수명이 짧은 형광이 사라진 뒤 재므로 둘을 구별한다.</li>
+<li>② 수명이 긴 삼중항의 충돌 탈활성화를 줄이려고 <b>액체 질소 온도, 강직한 매질</b>에서 재는 장치(Dewar 플라스크).</li></ul></div>
+<div class=fig style="margin:0"><img src="assets/ch03/dewar.png"><small>Fig 15-13 저온 인광 측정용 Dewar 플라스크.</small></div></div>
+</div>
+
+<div class=sec><div class=bar>3-9. 보정과 표준화 <small>p.32~33</small></div>
+<ul>
+<li><b>광원 보정</b>: 기준 PMT로 광원 세기를 감시하고 시료 신호/기준 신호 비를 계속 구한다. 광원 세기 요동과 드리프트를 보정한다. 공간 이중 빔, 시간 이중 빔 설계를 모두 쓴다.</li>
+<li><b>보정된 들뜸 스펙트럼</b>: 광원 세기와 광학 부품 효율이 파장에 따라 다른 것을 보정하려고 <b>양자 계수기(quantum counter)</b>를 쓴다. 양자효율이 높은 형광체를 진하게 넣은 기준 셀이다. 예: 글리세롤 속 3~8 g/L 로다민 B는 220~600 nm 빛을 거의 다 흡수한다.</li>
+<li><b>기기 표준화</b>: 광원, 변환기 감도 등이 날마다 달라 같은 용액도 같은 값이 안 나온다. 안정한 형광체 표준 용액으로 표준화한다. 가장 흔한 것은 약 <b>10⁻⁵ M 황산 퀴닌</b>(들뜸 350 nm, 방출 450 nm)이다.</li>
+</ul>
+<div class=fig><img src="assets/ch03/quinine_corr.png" style="width:62%"><small>Fig 15-14 0.2 M H₂SO₄ 속 황산 퀴닌의 보정(실선)·비보정 스펙트럼. 보정하면 들뜸·방출 띠 모양이 달라진다.</small></div>
+</div>
+
+<div class=sec><div class=bar>3-10. 광발광법의 응용 <small>p.34~40</small></div>
+<ul>
+<li>형광·인광법은 흡수법보다 검출한계가 본질적으로 낮다. 가장 감도가 높은 분석법에 속한다.</li>
+</ul>
+<p class=why>형광 신호 F=Kc의 비례상수 K에 들뜸 복사력 P<sub>0</sub>가 들어 있다. 그래서 P<sub>0</sub>를 키우거나 신호를 더 증폭하면 감도가 높아진다. 흡수법은 P<sub>0</sub>와 P의 비(로그)를 재므로 P<sub>0</sub>를 키워도 A가 커지지 않는다.</p>
+<ul>
+<li>반면 <b>정밀도와 정확도는 흡수법보다 2~5배 나쁘다</b>. 정밀도는 광원 깜박임 잡음과 드리프트가, 정확도는 시료 속 공존 물질·입자가 추가 형광, 산란, 소광을 일으키는 것이 제한한다.</li>
+</ul>
+<div class=sub>무기 화학종 <small>p.35~36</small></div>
+<ul>
+<li>직접법: 형광을 내는 킬레이트를 만들어 그 방출을 잰다.</li>
+<li>간접법: 분석 대상이 형광을 소광해 세기가 줄어드는 것을 잰다. 음이온 분석에 가장 많이 쓴다.</li>
+<li>전이금속 이온은 형광 킬레이트를 잘 못 만든다. 이유 두 가지: ① 상자성 이온이 많아 계간 전이가 빨라져 형광이 꺼진다(인광은 보일 수 있다). ② 가까운 에너지 준위가 많아 내부 전환으로 탈활성화되기 쉽다.</li>
+</ul>
+<div class=fig><img src="assets/ch03/chelates.png"><small>Fig 15-15 금속 양이온용 형광 킬레이트제: 8-하이드록시퀴놀린(Al, Be 등), 알리자린 가닛 R(Al, F⁻), 플라보놀(Zr, Sn), 벤조인(B, Zn, Ge, Si).</small></div>
+<div class=fig><img src="assets/ch03/table15_2.png" style="width:86%"><small>Table 15-2 무기 화학종의 형광법(시약, 들뜸·형광 파장, 검출한계, 방해 물질).</small></div>
+<div class=sub>유기·생화학 화학종 <small>p.37</small></div>
+<p>Dean의 목록에 20개 넘게 있다(아데닌, 안트라닐산, 다환 방향족, 시스테인, 구아닌, 나프톨, 신경가스 사린·타분, 단백질, 살리실산). 의약품(아드레날린, 모르핀, 페니실린, 페노바르비탈, 프로카인, 레서핀, LSD), 식품, 임상 시료, 천연물에도 쓴다.</p>
+<div class=sub>인광법과 기타 <small>p.38~40</small></div>
+<ul>
+<li>인광법과 형광법은 상보적이다. <b>형광이 센 화합물은 인광이 약하고 그 반대도 같다.</b></li>
+<li>축합 방향족 중 할로젠, 황 같은 무거운 원자를 가진 것은 인광이 세다(중원자 효과).</li>
+<li>핵산, 아미노산, 퓨린·피리미딘, 효소, 석유 탄화수소, 농약 정량에 쓴다. 저온이 필요하고 정밀도가 나빠서 형광법만큼 널리 쓰이지 않는다.</li>
+<li>LC와 모세관 전기영동의 검출기로 광발광이 중요하다.</li>
+<li>수명 측정(Fig): A 들뜸 펄스, B 측정한 감쇠, C 보정한 감쇠 곡선(ns 단위).</li>
+<li>형광 이미징: 소뇌 Purkinje 세포의 칼슘 변화(Fig 15-16).</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>3-11. 화학발광 <small>p.41~45</small></div>
+<div class=box>
+<math display=block><mrow><mi>A</mi><mo>+</mo><mi>B</mi><mo>→</mo><msup><mi>C</mi><mo>*</mo></msup><mo>+</mo><mi>D</mi><mspace width="10pt"/><msup><mi>C</mi><mo>*</mo></msup><mo>→</mo><mi>C</mi><mo>+</mo><mi mathvariant="normal">h</mi><mi>ν</mi></mrow></math>
+<math display=block><mrow><msub><mi>I</mi><mtext>CL</mtext></msub><mo>=</mo><msub><mi>φ</mi><mtext>CL</mtext></msub><mfrac><mrow><mi>d</mi><mi>C</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi>φ</mi><mtext>EX</mtext></msub><msub><mi>φ</mi><mtext>EM</mtext></msub><mfrac><mrow><mi>d</mi><mi>C</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow></math>
+<p class=en>I<sub>CL</sub> 화학발광 세기, dC/dt 반응 속도, φ<sub>CL</sub> 양자효율(0.01~0.2), φ<sub>EX</sub> 들뜸 양자효율(반응한 분자당 들뜬 상태 수), φ<sub>EM</sub> 방출 양자효율(들뜬 상태당 광자 수).</p></div>
+<div class=two style="align-items:center">
+<div class=fig style="margin:0"><img src="assets/ch03/cl_time.png"><small>Fig 15-17 시약을 섞은 뒤 세기가 빠르게 최대에 오르고 천천히 줄어든다.</small></div>
+<div><ul><li>[보충] 빛을 쪼이지 않으므로 산란광과 광원 잡음이 없다. 배경이 거의 0이라 감도가 매우 높고 기기가 간단하다(광원·단색화 장치 불필요).</li></ul></div></div>
+<div class=sub>기체 분석 <small>p.43</small></div>
+<p>대기 오염물(오존, 질소 산화물, 황 화합물)을 고감도로 잰다.</p>
+<div class=box>
+<math display=block><mrow><mtext>NO</mtext><mo>+</mo><msub><mtext>O</mtext><mn>3</mn></msub><mo>→</mo><msubsup><mtext>NO</mtext><mn>2</mn><mo>*</mo></msubsup><mo>+</mo><msub><mtext>O</mtext><mn>2</mn></msub><mspace width="8pt"/><msubsup><mtext>NO</mtext><mn>2</mn><mo>*</mo></msubsup><mo>→</mo><msub><mtext>NO</mtext><mn>2</mn></msub><mo>+</mo><mi mathvariant="normal">h</mi><mi>ν</mi><mspace width="4pt"/><mtext>(600~2800 nm)</mtext></mrow></math>
+<math display=block><mrow><mn>4</mn><msub><mtext>H</mtext><mn>2</mn></msub><mo>+</mo><mn>2</mn><msub><mtext>SO</mtext><mn>2</mn></msub><mo>⇌</mo><msubsup><mtext>S</mtext><mn>2</mn><mo>*</mo></msubsup><mo>+</mo><mn>4</mn><msub><mtext>H</mtext><mn>2</mn></msub><mtext>O</mtext><mspace width="8pt"/><msubsup><mtext>S</mtext><mn>2</mn><mo>*</mo></msubsup><mo>→</mo><msub><mtext>S</mtext><mn>2</mn></msub><mo>+</mo><mi mathvariant="normal">h</mi><mi>ν</mi><mspace width="4pt"/><mtext>(384, 394 nm)</mtext></mrow></math>
+<p class=en>황 화합물(H₂S, SO₂, 머캅탄)은 수소 불꽃에서 S₂*를 만들어 파란 빛을 낸다.</p></div>
+<div class=sub>액체상 무기 화학종: 루미놀 <small>p.44</small></div>
+<div class=fig><img src="assets/ch03/luminol.png" style="width:72%"><small>−CO−NH−NHR 작용기를 가진 유기물(루미놀)이 O₂, H₂O₂ 같은 강한 산화제와 반응해 3-아미노프탈레이트 음이온 들뜬 상태를 만들고 약 425 nm 파란 빛을 낸다.</small></div>
+<div class=sub>유기 화학종 <small>p.45</small></div>
+<ul>
+<li>포도당, 콜레스테롤, 콜린, 요산, 아미노산, 알데하이드, 락테이트.</li>
+<li>분석물을 기질로 하는 효소 반응을 먼저 하고, 그 생성물(주로 H₂O₂)을 화학발광으로 잰다(바이오센서). 예: 요산 + O₂ → (uricase) 알란토인 + H₂O₂. β-D-포도당 + O₂ → (glucose oxidase) 글루콘산 + H₂O₂.</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>헷갈리는 짝</div>
+<table>
+<tr><th>구별 기준</th><th>형광</th><th>인광</th></tr>
+<tr><td>전이</td><td>S₁→S₀ (스핀 허용)</td><td>T₁→S₀ (스핀 <b>금지</b>)</td></tr>
+<tr><td>시간</td><td>10⁻⁵~10⁻¹⁰ s</td><td>10⁻⁴~10 s 이상</td></tr>
+<tr><td>파장</td><td>흡수보다 김</td><td>형광보다 <b>더</b> 김</td></tr>
+<tr><td>측정 조건</td><td>상온 용액</td><td><b>저온(77 K), 강직 매질</b></td></tr>
+<tr><td>중원자</td><td>줄어든다</td><td>늘어난다</td></tr>
+</table>
+<table>
+<tr><th>구별 기준</th><th>A</th><th>B</th></tr>
+<tr><td>다중도</td><td>내부 전환: <b>같은</b> 다중도</td><td>계간 전이: <b>다른</b> 다중도</td></tr>
+<tr><td>상대</td><td>내부 전환: 분자 내</td><td>외부 전환: 용매·용질과 충돌</td></tr>
+<tr><td>결합 끊김</td><td>선해리: 내부 전환 거침</td><td>해리: 바로 높은 진동 준위로</td></tr>
+<tr><td>빛 필요</td><td>광발광: 광자 흡수</td><td>화학발광: <b>반응</b>으로 들뜸</td></tr>
+<tr><td>감도·정밀도</td><td>형광: 감도 1~3자릿수 높음</td><td>흡수: 정밀도 2~5배 좋음</td></tr>
+<tr><td>스펙트럼</td><td>들뜸: 방출 λ 고정</td><td>방출: 들뜸 λ 고정</td></tr>
+</table></div>
+
+<div class=sec><div class=sub>확인 질문</div>
+<ol class=q>
+<li>광발광이란 무엇이고, 형광과 인광의 차이를 스핀 상태로 설명하면? → 3-1, 3-2</li>
+<li>네 가지 비복사 탈활성화 과정의 정의와 차이는? → 3-4</li>
+<li>양자효율 식을 쓰고, 구조적 강직성과 온도가 φ를 바꾸는 이유는? → 3-5, 3-6</li>
+<li>F = Kc가 성립하는 조건과 고농도에서 음의 편차가 생기는 이유는? → 3-6</li>
+<li>형광법이 흡수법보다 감도가 높은 이유와 정밀도가 나쁜 이유는? → 3-10</li>
+<li>인광을 저온·강직 매질에서 재는 이유와 중원자 효과는? → 3-4, 3-8</li>
+</ol></div>
+
+</div>
+<script src=paginate.js></script>
+</body></html>

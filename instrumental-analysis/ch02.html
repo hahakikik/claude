@@ -1,0 +1,254 @@
+<!doctype html><html lang=ko><meta charset=utf-8><title>2장 UV-visible 총정리</title>
+<link rel=stylesheet href=style.css>
+<body>
+<div id=src data-title="2장 UV-visible 흡수분광법 총정리" data-sub="기기분석 · Chap 13·14 · 교재 슬라이드 기준" data-foot="출처: 교재 슬라이드 Chap 13·14(p.N은 PDF 쪽) · 녹음 없음 · 족보 주제 반영 · [보충]은 슬라이드 밖 교재 수준 설명">
+
+<div class=sec><div class=bar>2-1. 투과도·흡광도와 Beer 법칙<span class=jb>족보</span> <small>p.3~5</small></div>
+<ul>
+<li>UV-vis 분자흡수분광법은 <b>190~800 nm</b> 영역의 흡수를 잰다. 무기, 유기, 생체 화학종의 정량에 널리 쓰인다.</li>
+</ul>
+<div class=box>
+<math display=block><mrow><mi>A</mi><mo>=</mo><mo>−</mo><msub><mi>log</mi><mn>10</mn></msub><mi>T</mi><mo>=</mo><mi>log</mi><mfrac><msub><mi>P</mi><mn>0</mn></msub><mi>P</mi></mfrac><mo>=</mo><mi>ε</mi><mi>b</mi><mi>c</mi></mrow></math>
+<p class=en>T 투과도(0~1), A 흡광도(단위 없음), ε 몰흡광계수(L·mol⁻¹·cm⁻¹), b 광로 길이(cm), c 몰농도(mol·L⁻¹). 흡광계수 a를 쓰면 A=abc이고 a의 단위는 L·g⁻¹·cm⁻¹이다.</p></div>
+<p class=why>A와 T는 로그 관계라서 T가 1에서 0으로 줄 때 A는 0에서 무한대로 커진다. 농도에 직선 비례하는 것은 T가 아니라 A다.</p>
+<div class=sub>실제 측정 <small>p.4~5</small></div>
+<ul>
+<li>셀 벽에서 반사(공기-유리, 유리-용액 경계)와 용액 속 산란으로 빛이 줄어든다(Fig 13-1).</li>
+<li>그래서 P<sub>0</sub> 대신 용매만 담은 셀의 투과 세기를 기준으로 쓴다.</li>
+</ul>
+<div class=box><math display=block><mrow><mi>T</mi><mo>=</mo><mfrac><msub><mi>P</mi><mtext>solution</mtext></msub><msub><mi>P</mi><mtext>solvent</mtext></msub></mfrac><mo>≈</mo><mfrac><mi>P</mi><msub><mi>P</mi><mn>0</mn></msub></mfrac><mspace width="10pt"/><mi>A</mi><mo>=</mo><mi>log</mi><mfrac><msub><mi>P</mi><mtext>solvent</mtext></msub><msub><mi>P</mi><mtext>solution</mtext></msub></mfrac></mrow></math></div>
+<div class=fig><img src="assets/ch02/cell_losses.png" style="width:66%"><small>Fig 13-1 셀의 모든 경계에서 반사 손실, 용액 안에서 산란 손실이 생긴다.</small></div>
+<div class=sub>혼합물의 흡광도 <small>p.5</small></div>
+<p>흡광도는 더할 수 있다. 서로 반응하지 않는 성분이 여러 개면 전체 흡광도는 각 성분 흡광도의 합이다.</p>
+<div class=box><math display=block><mrow><msub><mi>A</mi><mtext>total</mtext></msub><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mo>+</mo><msub><mi>A</mi><mn>2</mn></msub><mo>+</mo><mo>⋯</mo><mo>=</mo><msub><mi>ε</mi><mn>1</mn></msub><mi>b</mi><msub><mi>c</mi><mn>1</mn></msub><mo>+</mo><msub><mi>ε</mi><mn>2</mn></msub><mi>b</mi><msub><mi>c</mi><mn>2</mn></msub><mo>+</mo><mo>⋯</mo></mrow></math></div>
+</div>
+
+<div class=sec><div class=bar>2-2. Beer 법칙의 한계<span class=jb>족보</span> <small>p.6~8</small></div>
+<ul>
+<li><b>진짜 한계(real limitation)</b>: Beer 법칙은 농도가 낮을 때만 맞는 극한 법칙(limiting law)이다. [보충] 농도가 대략 0.01 M을 넘으면 분자 사이 거리가 가까워져 전하 분포가 서로 영향을 주고 ε가 바뀐다. 굴절률도 농도에 따라 변한다.</li>
+<li><b>겉보기 화학적 편차(apparent chemical deviation)</b>: 분석물이 해리, 회합, 용매와 반응해 흡수 스펙트럼이 다른 생성물을 만들 때 생긴다. 예: 산염기 지시약 HIn ⇌ H⁺ + In⁻. 희석하면 평형이 옮겨 가 HIn과 In⁻의 비가 바뀐다.</li>
+<li><b>기기적 편차(instrumental deviation)</b>: b가 일정해도 측정 흡광도와 농도의 비례가 깨지는 경우다. 다색광과 미광이 원인이다.</li>
+</ul>
+<div class=sub>다색광(polychromatic radiation)에 의한 편차 <small>p.7</small></div>
+<p>Beer 법칙은 단색광일 때만 엄밀히 성립한다. 두 파장 λ′, λ″가 섞여 있으면 측정 흡광도 A<sub>m</sub>은 다음과 같다.</p>
+<div class=box><math display=block><mrow><msub><mi>A</mi><mi>m</mi></msub><mo>=</mo><mi>log</mi><mfrac><mrow><msubsup><mi>P</mi><mn>0</mn><mo>′</mo></msubsup><mo>+</mo><msubsup><mi>P</mi><mn>0</mn><mo>″</mo></msubsup></mrow><mrow><msubsup><mi>P</mi><mn>0</mn><mo>′</mo></msubsup><msup><mn>10</mn><mrow><mo>−</mo><msup><mi>ε</mi><mo>′</mo></msup><mi>b</mi><mi>c</mi></mrow></msup><mo>+</mo><msubsup><mi>P</mi><mn>0</mn><mo>″</mo></msubsup><msup><mn>10</mn><mrow><mo>−</mo><msup><mi>ε</mi><mo>″</mo></msup><mi>b</mi><mi>c</mi></mrow></msup></mrow></mfrac></mrow></math>
+<p class=en>ε′ = ε″일 때만 A<sub>m</sub> = ε′bc로 직선이다. 두 값이 다를수록 높은 농도에서 아래로 휜다(음의 편차).</p></div>
+<div class=fig><img src="assets/ch02/polychromatic.png"><small>Fig 13-4·13-5 ε′와 ε″ 차이가 클수록 직선에서 더 벗어난다. 흡수 봉우리 꼭대기(Band A, ε가 거의 일정)에서 재면 직선이고, 경사면(Band B)에서 재면 휜다.</small></div>
+<p class=why>흡수 최대 파장(λ<sub>max</sub>)에서 재는 이유가 이것이다. 꼭대기에서는 띠폭 안의 ε 변화가 작아 Beer 법칙에서 덜 벗어나고, 감도도 가장 크다.</p>
+<div class=sub>미광(stray radiation)에 의한 편차 <small>p.8</small></div>
+<div class=box><math display=block><mrow><msup><mi>A</mi><mo>′</mo></msup><mo>=</mo><mi>log</mi><mfrac><mrow><msub><mi>P</mi><mn>0</mn></msub><mo>+</mo><msub><mi>P</mi><mi>s</mi></msub></mrow><mrow><mi>P</mi><mo>+</mo><msub><mi>P</mi><mi>s</mi></msub></mrow></mfrac></mrow></math>
+<p class=en>P<sub>s</sub> 시료에 흡수되지 않는 미광의 세기. 미광은 원하는 파장 밖의 빛이 검출기에 들어오는 것이다.</p></div>
+<div class=fig><img src="assets/ch02/stray.png" style="width:62%"><small>Fig 13-6 미광 비율(P<sub>s</sub>/P<sub>0</sub>)이 0.2%, 1%, 5%로 커질수록 높은 흡광도(높은 농도)에서 더 일찍 아래로 휜다.</small></div>
+</div>
+
+<div class=sec><div class=bar>2-3. 기기 잡음과 농도 오차 <small>p.9~10</small></div>
+<p>T 측정의 표준편차 s<sub>T</sub>가 농도의 상대 표준편차로 어떻게 번지는지 오차 전파로 구한다.</p>
+<div class=box><math display=block><mrow><mi>c</mi><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mrow><mi>ε</mi><mi>b</mi></mrow></mfrac><mi>log</mi><mi>T</mi><mo>=</mo><mo>−</mo><mfrac><mn>0.434</mn><mrow><mi>ε</mi><mi>b</mi></mrow></mfrac><mi>ln</mi><mi>T</mi><mspace width="10pt"/><mfrac><msub><mi>s</mi><mi>c</mi></msub><mi>c</mi></mfrac><mo>=</mo><mfrac><mrow><mn>0.434</mn><msub><mi>s</mi><mi>T</mi></msub></mrow><mrow><mi>T</mi><mi>log</mi><mi>T</mi></mrow></mfrac></mrow></math>
+<p class=en>농도 측정의 불확도는 T의 크기에 따라 비선형으로 변한다. T가 너무 크거나(묽음) 너무 작을(진함) 때 모두 오차가 커진다.</p></div>
+<div class=fig><img src="assets/ch02/noise_cases.png"><small>Table 13-3·Fig 13-7 잡음의 세 경우.</small></div>
+<table><tr><th>경우</th><th>s<sub>T</sub>의 형태</th><th>원인과 기기</th></tr>
+<tr><td>Case I</td><td>s<sub>T</sub>=k<sub>1</sub> (일정)</td><td>읽기 해상도 한계, 열(Johnson) 잡음, 암전류·증폭기 잡음. 저가 광도계, IR 분광광도계.</td></tr>
+<tr><td>Case II</td><td>s<sub>T</sub>=k<sub>2</sub>√(T²+T)</td><td>광검출기 산탄(shot) 잡음. 고급 UV-vis 분광광도계.</td></tr>
+<tr><td>Case III</td><td>s<sub>T</sub>=k<sub>3</sub>T</td><td>셀 위치 불확실성, 광원 깜박임(flicker). 고급 UV-vis·IR.</td></tr></table>
+<p class=note>Fig 13-7: Case I은 A가 약 0.4(T≈0.37) 부근에서 오차가 최소다. Case II는 최소가 더 높은 A 쪽으로 넓게 퍼진다. Case III은 A가 클수록 오차가 계속 줄어든다.</p>
+</div>
+
+<div class=sec><div class=bar>2-4. 기기 구성 <small>p.11~24</small></div>
+<p>구성 요소는 광원, 파장 선택기, 시료 용기, 복사 변환기(검출기), 신호 처리·표시 장치다.</p>
+<div class=sub>광원(Sources) <small>p.12~13</small></div>
+<p>파장 범위 전체에서 세기가 급하게 변하지 않는 연속 광원이 필요하다.</p>
+<table><tr><th>광원</th><th>파장 범위와 특징</th></tr>
+<tr><td>D₂·H₂ 램프</td><td>UV 연속 스펙트럼 <b>160~375 nm</b>. 전기에너지로 들뜬 D₂*가 두 원자로 쪼개지며 광자를 낸다. 에너지가 두 원자의 운동에너지와 광자에 나뉘어 연속이 된다.</td></tr>
+<tr><td>텅스텐 필라멘트</td><td>가시·근적외 <b>350~2500 nm</b>의 가장 흔한 광원. 필라멘트 온도 2870 K.</td></tr>
+<tr><td>LED</td><td>순방향 바이어스 pn 접합. GaAlAs 900, GaP 550, GaN 465, InGaN 450 nm.</td></tr>
+<tr><td>Xe 아크 램프</td><td>Xe 기체 속 전류로 강한 빛. <b>200~1000 nm</b>, 최대 약 500 nm.</td></tr></table>
+<div class=box style="border:none;padding:0"><math display=block><mrow><msub><mi mathvariant="normal">D</mi><mn>2</mn></msub><mo>+</mo><msub><mi>E</mi><mi>e</mi></msub><mo>→</mo><msubsup><mi mathvariant="normal">D</mi><mn>2</mn><mo>*</mo></msubsup><mo>→</mo><msup><mi mathvariant="normal">D</mi><mo>′</mo></msup><mo>+</mo><msup><mi mathvariant="normal">D</mi><mo>″</mo></msup><mo>+</mo><mi mathvariant="normal">h</mi><mi>ν</mi><mspace width="8pt"/><msub><mi>E</mi><mi>e</mi></msub><mo>=</mo><msub><mi>E</mi><mrow><msup><mi mathvariant="normal">D</mi><mo>′</mo></msup></mrow></msub><mo>+</mo><msub><mi>E</mi><mrow><msup><mi mathvariant="normal">D</mi><mo>″</mo></msup></mrow></msub><mo>+</mo><mi mathvariant="normal">h</mi><mi>ν</mi></mrow></math></div>
+<div class=fig><img src="assets/ch02/lamps.png"><small>Fig 13-11·13-12 D₂ 램프는 UV(200~400 nm)에서 세고 파장이 길수록 약해진다. 텅스텐 램프는 1000 nm 근처 최대의 넓은 연속 스펙트럼이다.</small></div>
+<div class=sub>시료 용기(셀, cuvette) <small>p.14</small></div>
+<ul>
+<li>측정 파장의 빛을 통과시키는 재질이어야 한다.</li>
+<li>석영(quartz)·용융 실리카: <b>300~3000 nm</b>(슬라이드 표기). 규산염 유리: 350~2000 nm. 플라스틱: 가시 영역.</li>
+</ul>
+<p class=note>슬라이드는 석영을 "가시·근적외 300~3000 nm에서 투명"이라고 적었다. [보충] 교재 기준으로 석영은 350 nm 아래 UV 측정에 꼭 필요한 셀이다(유리는 UV를 흡수). 시험에서는 "UV 측정에는 석영 셀"로 답하는 것이 안전하다.</p>
+<div class=sub>파장 선택: 회절발(grating)<span class=jb>족보</span> <small>p.11, p.16</small></div>
+<div class=two style="align-items:center">
+<div class=fig style="margin:0"><img src="assets/ch02/grating.png"></div>
+<div class=box style="margin:0"><math display=block><mrow><mi>d</mi><mo>(</mo><mi>sin</mi><mi>θ</mi><mo>−</mo><mi>sin</mi><mi>i</mi><mo>)</mo><mo>=</mo><mi>n</mi><mi>λ</mi></mrow></math><p class=en>d 홈 간격, i 입사각, θ 회절각, n 회절 차수.</p></div>
+</div>
+<ul>
+<li>이웃한 두 홈에서 반사된 빛의 경로차는 l − l′ = d sin θ − d sin i이다. 경로차가 파장의 정수배일 때 보강 간섭이 일어난다.</li>
+<li>그래서 각 θ마다 특정 파장만 보강되어 빛이 파장별로 나뉜다(분산). 회절발을 돌리면 출구 슬릿으로 나가는 파장이 바뀐다.</li>
+</ul>
+<p class=note>[보충] 교재 식은 nλ = d(sin i + sin r) 형태로도 쓴다. 각의 부호 규약(법선 기준 같은 쪽/반대쪽)만 다르고 원리는 같다. 슬라이드 식을 그대로 쓰면 된다.</p>
+<div class=sub>기기의 네 형식 <small>Fig 13-13·13-14, p.15~16</small></div>
+<div class=fig><img src="assets/ch02/beam_types.png" style="width:66%"><small>Fig 13-13 (a) 단일 빔 (b) 공간 이중 빔 (c) 시간 이중 빔.</small></div>
+<table><tr><th>형식</th><th>구조와 특징</th></tr>
+<tr><td>Single beam</td><td>빔 하나. 기준 셀과 시료 셀을 번갈아 넣어 P<sub>0</sub>, P를 잰다. 광원이 안정해야 한다.</td></tr>
+<tr><td>Double beam in space</td><td>빔 분할기로 두 빔을 만들어 기준·시료를 <b>동시에</b> 두 검출기로 잰다(차동 증폭기).</td></tr>
+<tr><td>Double beam in time</td><td>회전 섹터 거울(chopper)이 빔을 번갈아 기준·시료로 보내 <b>검출기 하나</b>로 잰다. 광원 변동과 검출기 차이를 보정한다.</td></tr>
+<tr><td>Multichannel</td><td>회절발 분광기와 <b>다이오드 배열</b> 검출기로 모든 파장을 한 번에 잰다. 1초 안에 전체 스펙트럼을 얻는다.</td></tr></table>
+<div class=fig><img src="assets/ch02/multichannel.png" style="width:56%"><small>Fig 13-14·13-15 시료를 지난 빛을 회절발(G)이 나누고 배열 검출기(A)가 모든 파장을 동시에 받는다.</small></div>
+<div class=sub>대표 기기 <small>p.17~24</small></div>
+<ul>
+<li>광도계(photometer): 필터로 파장을 고르는 간단한 기기. 가시 광도계(Fig 13-16), LED 비색계(Fig 13-17), 탐침형(probe-type) 광도계(Fig 13-18).</li>
+<li>분광광도계(spectrophotometer): 단색화 장치로 파장을 고른다. Spectronic 20(단일 빔), Cary 100(이중 빔), Cary 300(이중 분산), 광섬유 소형 분광기, 다이오드 배열 분광광도계(Fig 13-19~25).</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>2-5. 몰흡광계수와 흡수 화학종 <small>p.26~28</small></div>
+<ul>
+<li>UV-vis의 ε는 <b>0~10⁵</b> L·mol⁻¹·cm⁻¹ 범위다. ε는 화학종의 포획 단면적과 전이 확률로 정해진다.</li>
+</ul>
+<div class=box><math display=block><mrow><mi>ε</mi><mo>=</mo><mn>8.7</mn><mo>×</mo><msup><mn>10</mn><mn>19</mn></msup><mi>P</mi><mi>A</mi></mrow></math><p class=en>P 전이 확률(허용 전이 0.1~1), A 단면적(cm²/분자). 전이 확률이 0.01보다 작으면 <b>금지 전이(forbidden)</b>다. 허용 전이의 ε는 10⁴~10⁵이다.</p></div>
+<div class=sub>흡수의 두 단계 <small>p.27</small></div>
+<ul>
+<li>1단계 전자 들뜸: M + hν → M*. 들뜬 상태 수명은 10⁻⁸~10⁻⁹ s다.</li>
+<li>2단계 이완: 가장 흔한 것은 M* → M + 열이다. 그 밖에 광화학 분해로 새 화학종이 생기거나, 형광·인광으로 빛을 다시 낸다.</li>
+</ul>
+<p>흡수 화학종은 세 종류다. σ, π, n 전자를 가진 유기 화학종, d·f 전자를 가진 무기 화학종, 전하이동 착물이다.</p>
+<p class=note>Fig 14-1 테트라진: 기체에서는 진동 미세구조가 보이고, 헥세인 용액에서는 일부만, 물에서는 넓은 띠 하나가 된다. 용매와의 상호작용이 미세구조를 지운다.</p>
+</div>
+
+<div class=sec><div class=bar>2-6. 유기 화합물의 전자 전이<span class=jb>족보</span> <small>p.29~30</small></div>
+<div class=fig><img src="assets/ch02/transitions.png" style="width:74%"><small>σ, π, n 전자의 전이. 에너지는 σ→σ* &gt; n→σ* &gt; π→π* &gt; n→π* 순이다.</small></div>
+<table><tr><th>전이</th><th>예와 특징</th></tr>
+<tr><td>σ→σ*</td><td>알케인. 에너지가 가장 커서 진공 UV(&lt;185 nm)에 있다.</td></tr>
+<tr><td>n→σ*</td><td>O, N, S, 할로젠을 가진 화합물. 150~250 nm, ε 100~3000(Table 14-2).</td></tr>
+<tr><td>π→π*</td><td>알켄, 카보닐, 알카인, 아조. 200~700 nm, <b>ε 10³~10⁴</b>로 크다.</td></tr>
+<tr><td>n→π*</td><td>카보닐 등. 가장 낮은 에너지(긴 파장, 예: 아세톤 280 nm), <b>ε 10~100</b>으로 작다.</td></tr></table>
+<p class=note>[보충] 유기 분석에 실제로 쓰는 것은 π→π*와 n→π*다. 둘 다 200 nm보다 긴 실험하기 쉬운 영역에 흡수가 오기 때문이다.</p>
+<div class=fig><img src="assets/ch02/table14_1.png"><small>Table 14-1 발색단의 흡수 특성. 알켄 177 nm(13,000), 카보닐 186(1000)과 280 nm(16), 아조 339 nm(5).</small></div>
+</div>
+
+<div class=sec><div class=bar>2-7. 발색단·조색단과 흡수 이동<span class=jb>족보</span> <small>p.31~32</small></div>
+<ul>
+<li><b>발색단(chromophore)</b>: UV-vis를 흡수하는 작용기를 가진 분자(원자단)다. 예: C=C, C=O, N=N, NO₂.</li>
+<li><b>조색단(auxochrome)</b>: 발색단에 붙어 그 흡수 능력을 바꾸는 원자단이다. 스스로는 색을 내지 못하지만 발색단과 함께 있으면 색을 진하게 한다. 예: −OH, −NH₂, −CHO.</li>
+</ul>
+<p class=why>[보충] 조색단에는 비공유 전자쌍(n 전자)이 있다. 이 전자쌍이 발색단의 π계와 공명(n-π 짝지음)해 π 전자가 더 넓게 퍼지면 HOMO-LUMO 간격이 줄어 더 긴 파장을 더 세게 흡수한다.</p>
+<div class=fig><img src="assets/ch02/chromophores.png"><small>Fig 14-2 β-카로틴(콘쥬게이션 11개, 450 nm 근처, ε 약 10⁵), 카페인, 아스피린, 아세톤의 흡수. 콘쥬게이션이 길수록 λ<sub>max</sub>와 ε가 커진다.</small></div>
+<div class=two style="align-items:center">
+<div class=fig style="margin:0"><img src="assets/ch02/shifts.png"></div>
+<table style="margin:0"><tr><th>이름</th><th>변화</th></tr>
+<tr><td>Bathochromic</td><td>적색 이동. λ<sub>max</sub>가 긴 파장으로</td></tr>
+<tr><td>Hypsochromic</td><td>청색 이동. 짧은 파장으로</td></tr>
+<tr><td>Hyperchromic</td><td>농색 효과. ε 증가</td></tr>
+<tr><td>Hypochromic</td><td>담색 효과. ε 감소</td></tr></table>
+</div>
+<p class=note>[보충] 적색 이동의 원인: 콘쥬게이션 증가, 조색단 치환, π→π* 전이에서 용매 극성 증가. 청색 이동의 원인: n→π* 전이에서 용매 극성 증가(수소결합이 n 전자를 안정화해 간격이 커짐), 콘쥬게이션이 끊김(예: 아닐린에 산을 넣어 아닐리늄 이온이 됨).</p>
+</div>
+
+<div class=sec><div class=bar>2-8. 콘쥬게이션과 방향족 화합물 <small>p.33~37</small></div>
+<ul>
+<li>콘쥬게이션된 π계에서는 분자 오비탈이 더 많이 생기고, HOMO(가장 높은 채워진 오비탈)와 LUMO(가장 낮은 빈 반결합 오비탈)의 간격이 줄어든다.</li>
+<li>그래서 에틸렌 → 1,3-뷰타다이엔 → 헥사트라이엔 → 옥타테트라엔 순으로 π→π* 에너지가 줄고 λ<sub>max</sub>가 길어진다(Fig 5-14·5-15).</li>
+<li>나프탈렌 → 안트라센 → 테트라센처럼 고리가 늘어도 같은 이유로 적색 이동한다.</li>
+</ul>
+<div class=fig><img src="assets/ch02/butadiene.png" style="width:86%"><small>Fig 5-14 에틸렌보다 1,3-뷰타다이엔의 HOMO-LUMO 간격(π→π*)이 작다.</small></div>
+<div class=fig><img src="assets/ch02/conjugation.png"><small>Fig 5-15 사슬이 길수록 간격이 줄고, 오른쪽 그래프처럼 고리가 많을수록 흡수가 긴 파장으로 간다.</small></div>
+<div class=sub>벤젠의 흡수 띠 <small>p.35~37</small></div>
+<div class=two style="align-items:center">
+<div class=fig style="margin:0"><img src="assets/ch02/benzene.png"></div>
+<div><ul>
+<li><b>E₂ 띠(primary)</b>: 약 204 nm, ε 7900. 센 띠다.</li>
+<li><b>B₂ 띠(secondary)</b>: 약 256 nm, ε 200. 대칭으로 금지된 약한 전이이고 진동 미세구조(fine structure)가 보인다.</li>
+<li>[보충] 180 nm 띠(E₁)는 허용 전이로 가장 세다.</li>
+</ul></div></div>
+<div class=fig><img src="assets/ch02/table14_4.png"><small>Table 14-4 방향족 화합물. pH 효과: 페놀(211, 270) → 페놀레이트(235, 287) 적색 이동. 아닐린(230, 280) → 아닐리늄(203, 254) 청색 이동.</small></div>
+<p class=why>페놀레이트는 음전하의 비공유 전자쌍이 고리와 더 강하게 공명해 적색 이동한다. 아닐리늄은 N의 비공유 전자쌍이 H⁺와 결합해 고리와 공명하지 못하므로 벤젠과 비슷한 흡수로 돌아간다(청색 이동).</p>
+<div class=fig><img src="assets/ch02/table5_12.png" style="width:82%"><small>Table 5-12 치환기 효과. 전자 주개(−CH₃, −Cl, −OH, −NH₂)와 전자 끌개(−CN, −COOH, −CHO, −NO₂) 모두 E₂·B₂ 띠를 긴 파장으로 옮긴다. −NO₂가 가장 크게 옮긴다(268.5 nm).</small></div>
+</div>
+
+<div class=sec><div class=bar>2-9. 무기 화합물과 전하이동 흡수 <small>p.38~40</small></div>
+<ul>
+<li>비결합 전자를 가진 무기 음이온: 질산 313, 탄산 217, 아질산 360·280, 아자이드 230, 트라이싸이오탄산 500 nm.</li>
+<li><b>1·2 전이 계열 금속 이온과 착물</b>: 채워진 d 오비탈에서 빈 d 오비탈로 전이한다. 에너지가 결합한 리간드에 따라 달라진다. 띠가 넓다(Fig 14-3: Ni²⁺, Cr₂O₇²⁻, Cu²⁺, Co²⁺).</li>
+<li><b>란타넘족·악티늄족</b>: 4f, 5f 전자 전이. 바깥 전자가 f 전자를 가려 주어 리간드 영향이 작으므로 <b>좁고 날카로운</b> 띠가 된다(Fig 14-4: Ho³⁺, Er³⁺, Pr³⁺, Sm³⁺).</li>
+</ul>
+<div class=fig><img src="assets/ch02/inorganic.png" style="width:86%"><small>Fig 14-3(전이금속, 넓은 띠)과 Fig 14-4(희토류, 좁은 띠).</small></div>
+<div class=sub>전하이동 착물(charge-transfer complex) <small>p.40</small></div>
+<div class=two style="align-items:center">
+<div><ul>
+<li>전자 주개(donor)와 전자 받개(acceptor)가 결합한 착물이다.</li>
+<li>빛을 흡수하면 주개의 전자가 받개 쪽 오비탈로 옮겨 간다. 들뜬 상태는 일종의 <b>분자 내 산화-환원</b> 생성물이다.</li>
+<li>ε가 <b>10,000 이상</b>으로 매우 커서 감도가 높다.</li>
+<li>예: Fe(SCN)²⁺(Fe³⁺ 연노랑 + SCN⁻ 무색 → 적갈색), Fe(phen)₃²⁺, 녹말-I₅⁻.</li>
+</ul></div>
+<div class=fig style="margin:0"><img src="assets/ch02/charge_transfer.png"><small>Fig 14-5</small></div></div>
+</div>
+
+<div class=sec><div class=bar>2-10. 정성 응용: 용매 <small>p.41</small></div>
+<div class=fig><img src="assets/ch02/solvents.png"><small>Table 14-3 용매의 사용 하한 파장(물 180, 에탄올 220, 헥세인 200, 아세톤 330 nm). Fig 14-6 아세트알데하이드: 기체·헵테인에서는 미세구조가 보이고, 물·알코올 같은 극성 용매에서는 사라진다.</small></div>
+<p>용매는 측정 파장에서 투명해야 하고, 극성 용매는 진동 미세구조를 지운다. 미세구조를 보려면 무극성 용매를 쓴다.</p>
+</div>
+
+<div class=sec><div class=bar>2-11. 정량 분석 <small>p.42~44</small></div>
+<ul>
+<li>특징: 유기·무기 모두에 쓸 수 있다. 검출한계 <b>10⁻⁴~10⁻⁵ M</b>(때로 10⁻⁶~10⁻⁷ M). 선택성은 중간~높음이다. 상대 불확도 1~3%로 정확하다. 측정이 쉽다.</li>
+<li>흡수하지 않는 화학종은 발색 시약과 반응시켜 잰다. 예: SCN⁻(Fe, Co, Mo), H₂O₂(Ti, V, Cr), I⁻(Bi, Pd, Te).</li>
+<li>절차: 파장 선택(λ<sub>max</sub>), 흡광도에 영향을 주는 변수(용매, pH, 온도, 전해질, 방해물) 확인, 셀 세척·취급, 검량선 작성, 표준물 첨가법, 혼합물 분석.</li>
+</ul>
+<div class=sub>두 성분 혼합물(M+N) <small>p.43</small></div>
+<div class=two style="align-items:center">
+<div class=box style="margin:0"><math display=block><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>=</mo><msub><mi>ε</mi><mrow><msub><mi>M</mi><mn>1</mn></msub></mrow></msub><mi>b</mi><msub><mi>c</mi><mi>M</mi></msub><mo>+</mo><msub><mi>ε</mi><mrow><msub><mi>N</mi><mn>1</mn></msub></mrow></msub><mi>b</mi><msub><mi>c</mi><mi>N</mi></msub></mrow></math>
+<math display=block><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>=</mo><msub><mi>ε</mi><mrow><msub><mi>M</mi><mn>2</mn></msub></mrow></msub><mi>b</mi><msub><mi>c</mi><mi>M</mi></msub><mo>+</mo><msub><mi>ε</mi><mrow><msub><mi>N</mi><mn>2</mn></msub></mrow></msub><mi>b</mi><msub><mi>c</mi><mi>N</mi></msub></mrow></math></div>
+<div class=fig style="margin:0"><img src="assets/ch02/mixture.png"></div></div>
+<p>두 파장 λ₁, λ₂에서 흡광도를 재고 네 ε를 표준물로 구하면 연립방정식 두 개로 c<sub>M</sub>, c<sub>N</sub>을 푼다. 각 성분의 흡수 차이가 큰 두 파장을 고른다(Fig 14-9).</p>
+<div class=sub>미분 분광법 <small>p.44</small></div>
+<div class=fig><img src="assets/ch02/derivative.png"><small>Fig 14-10·14-11 1차(dA/dλ), 2차(d²A/dλ²) 미분 스펙트럼은 겹친 봉우리와 어깨를 뚜렷하게 나누어 준다(소 알부민).</small></div>
+</div>
+
+<div class=sec><div class=bar>2-12. 광도 적정 <small>p.45</small></div>
+<div class=fig><img src="assets/ch02/titration.png"><small>Fig 14-12 적정 곡선 모양은 분석물(ε<sub>A</sub>), 생성물(ε<sub>P</sub>), 적정액(ε<sub>T</sub>) 중 무엇이 흡수하느냐로 정해진다. 두 직선의 교점(외삽)이 종말점이다. Fig 14-13 (a) EBT 지시약으로 EDTA 물 경도 적정(610 nm) (b) Thorin 지시약으로 BaCl₂ 황산 적정(523 nm).</small></div>
+<p>종말점 근처가 아니라 그 앞뒤 직선 부분의 데이터로 종말점을 정하므로, 평형이 덜 완결된 반응에도 쓸 수 있다.</p>
+</div>
+
+<div class=sec><div class=bar>2-13. 반응속도 분석법 <small>p.46~48</small></div>
+<ul>
+<li>A(분석물) + R(시약) ⇌ P(생성물). 평형에 도달하기 전 반응속도 영역에서 농도 변화 속도를 잰다(Fig 14-14).</li>
+<li>촉매 반응, 특히 효소 반응이 가장 많이 쓰인다. E + S ⇌ ES → P + E (Michaelis-Menten).</li>
+</ul>
+<div class=box><math display=block><mrow><msub><mi>K</mi><mi>m</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>k</mi><mrow><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>k</mi><mn>2</mn></msub></mrow><msub><mi>k</mi><mn>1</mn></msub></mfrac><mspace width="10pt"/><mfrac><mrow><mi>d</mi><mo>[</mo><mi>P</mi><mo>]</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msub><mi>k</mi><mn>2</mn></msub><msub><mrow><mo>[</mo><mi>E</mi><mo>]</mo></mrow><mn>0</mn></msub><mo>[</mo><mi>S</mi><mo>]</mo></mrow><mrow><msub><mi>K</mi><mi>m</mi></msub><mo>+</mo><mo>[</mo><mi>S</mi><mo>]</mo></mrow></mfrac></mrow></math>
+<p class=en>[S] ≫ K<sub>m</sub>: 속도 = k₂[E]₀로 효소 농도에 비례한다(효소 정량). [S] ≪ K<sub>m</sub>: 속도 = (k₂/K<sub>m</sub>)[E]₀[S] = k′[S]로 기질 농도에 비례한다(기질 정량).</p></div>
+<div class=fig><img src="assets/ch02/enzyme.png" style="width:88%"><small>Fig 14-15 기질 농도가 낮은 구간은 기질 정량, 높은 구간(포화)은 효소 정량에 쓴다.</small></div>
+<div class=fig><img src="assets/ch02/stopped_flow.png"><small>Fig 14-16 정지 흐름(stopped-flow) 혼합 장치는 빠른 반응을 ms 단위로 잰다. Fig 14-17 예측법: 반응 초기 데이터에 수학 모형을 맞춰 평형값 A<sub>e</sub>를 예측한다.</small></div>
+</div>
+
+<div class=sec><div class=bar>2-14. 착이온 연구법 <small>p.49</small></div>
+<p>착물 조성(금속:리간드 비)을 구하는 방법은 연속 변화법, 몰비법, 기울기비법, 컴퓨터 곡선 맞춤법이다.</p>
+<div class=fig><img src="assets/ch02/complex.png"><small>Fig 14-18 연속 변화법: 전체 몰수를 일정하게 두고 몰분율을 바꾼다. 두 직선의 교점이 V<sub>L</sub>/(V<sub>M</sub>+V<sub>L</sub>) = 0.66이면 ML₂다. Fig 14-19 몰비법: 리간드/금속 몰비에 대해 그리면 꺾이는 점이 1이면 1:1, 2면 1:2 착물이다.</small></div>
+</div>
+
+<div class=sec><div class=bar>2-15. 흡수한 색과 보이는 색 <small>p.50~52</small></div>
+<div class=fig><img src="assets/ch02/color_table.png" style="width:78%"><small>Table 5-14 보이는 색은 흡수한 색의 보색이다. β-카로틴 452 nm 흡수 → 주황, 라이코펜 474 nm → 빨강, 시아니딘 545 nm → 파랑, 엽록소 420·680 nm → 초록.</small></div>
+<p>가시광: 보라 400~420, 남색 420~440, 파랑 440~490, 초록 490~570, 노랑 570~585, 주황 585~620, 빨강 620~780 nm.</p>
+</div>
+
+<div class=sec><div class=bar>헷갈리는 짝</div>
+<table>
+<tr><th>구별 기준</th><th>A</th><th>B</th></tr>
+<tr><td>편차 원인</td><td>화학적: <b>평형</b>(해리·회합)</td><td>기기적: <b>다색광·미광</b></td></tr>
+<tr><td>휘는 방향</td><td>다색광: ε′≠ε″일수록</td><td>미광: P<sub>s</sub>/P<sub>0</sub> 클수록, 고농도</td></tr>
+<tr><td>역할</td><td>발색단: <b>흡수</b>하는 원자단</td><td>조색단: 흡수를 <b>바꾸는</b> 원자단</td></tr>
+<tr><td>λ 이동</td><td>Bathochromic: 적색(장파장)</td><td>Hypsochromic: 청색(단파장)</td></tr>
+<tr><td>ε 변화</td><td>Hyperchromic: 증가</td><td>Hypochromic: 감소</td></tr>
+<tr><td>ε 크기</td><td>π→π*: 10³~10⁴</td><td>n→π*: 10~100</td></tr>
+<tr><td>띠 모양</td><td>d 전자(전이금속): 넓음</td><td>f 전자(희토류): <b>좁음</b></td></tr>
+<tr><td>측정 방식</td><td>Double beam in space: 검출기 2개</td><td>Double beam in time: 초퍼, 검출기 1개</td></tr>
+<tr><td>pH 효과</td><td>페놀→페놀레이트: 적색</td><td>아닐린→아닐리늄: 청색</td></tr>
+<tr><td>벤젠 띠</td><td>E₂: 204 nm, ε 7900</td><td>B₂: 256 nm, ε 200, 미세구조</td></tr>
+</table></div>
+
+<div class=sec><div class=sub>확인 질문</div>
+<ol class=q>
+<li>Beer 법칙을 쓰고, 기기적 편차 두 가지(다색광, 미광)가 각각 왜 생기는가? → 2-1, 2-2</li>
+<li>λ<sub>max</sub>에서 측정하는 두 가지 이유는? → 2-2</li>
+<li>회절발 식 d(sin θ − sin i) = nλ에서 경로차와 보강 간섭의 관계는? → 2-4</li>
+<li>발색단과 조색단의 정의, 조색단이 적색 이동을 일으키는 이유는? → 2-7</li>
+<li>콘쥬게이션이 길어지면 λ<sub>max</sub>가 길어지는 이유를 HOMO-LUMO로 설명하면? → 2-8</li>
+<li>전하이동 착물이 분석에 유용한 이유는? → 2-9</li>
+</ol></div>
+
+</div>
+<script src=paginate.js></script>
+</body></html>
