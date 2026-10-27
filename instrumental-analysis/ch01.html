@@ -1,0 +1,269 @@
+<!doctype html><html lang=ko><meta charset=utf-8><title>1장 Introduction 총정리</title>
+<link rel=stylesheet href=style.css>
+<body>
+<div id=src data-title="1장 Introduction 총정리" data-sub="기기분석 · Chap 1·5·6 · 교재 슬라이드 기준" data-foot="출처: 교재 슬라이드 Chap 1·5·6(p.N은 PDF 쪽) · 녹음 없음 · 족보(25-2·23-2 수강자 후기) 주제 반영 · [일반 지식]은 슬라이드 밖 설명"><div class=sec><div class=bar>1-1. 분석화학과 기기분석 <small>p.2~8</small></div>
+<ul>
+<li>분석화학(analytical chemistry)은 시료의 화학 조성을 알아내는 방법을 다룬다.</li>
+<li><b>정성분석(qualitative)</b>은 원자·분자·작용기가 무엇인지 알려 준다. <b>정량분석(quantitative)</b>은 성분이 얼마나 있는지 숫자로 알려 준다.</li>
+<li>고전적 방법(classical)은 침전·추출·증류로 분리한 뒤 색, 끓는점, 용해도로 확인하고 무게(gravimetric)나 부피(volumetric)로 정량한다.</li>
+<li>기기분석(instrumental)은 전도도, 전극전위, 빛의 흡수·방출, 질량 대 전하비, 형광 같은 물리적 성질을 잰다. 분리는 크로마토그래피와 전기영동으로 한다.</li>
+<li>기기분석의 발전은 전자·컴퓨터 산업의 발전과 나란히 진행됐다.</li>
+</ul>
+<div class=sub>측정 과정 블록도 <small>Fig 1-1, p.5</small></div>
+<p>에너지원(stimulus)이 시료(system under study)를 자극하고, 시료의 응답(response)이 분석 정보가 된다. 자극 에너지는 전자기, 전기, 기계, 핵에너지의 네 종류다.</p>
+<div class=sub>데이터 영역(data domains) <small>p.7~8</small></div>
+<ul>
+<li>정보를 물리·화학적 성질이나 전기 신호로 나타내는(encoding) 방식을 data domain이라 한다.</li>
+<li><b>Nonelectrical domain</b>: 길이, 밀도, 화학 조성, 빛의 세기, 압력 등이다. 측정의 최종 목표는 분석 대상의 성질에 비례하는 숫자를 얻는 것이다.</li>
+<li><b>Electrical domain</b>: analog(전류·전압·전하의 크기), time(주파수·펄스폭·위상), digital(개수·직렬·병렬)로 나뉜다. Digital 영역은 두 영역에 걸친다.</li>
+<li>형광계 예(Fig 1-3): 광원 세기에서 형광 세기, 광변환기의 전류 I, 저항의 전압 V(=IR, Ohm 법칙), 숫자 표시로 영역이 바뀐다.</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>1-2. 검량(Calibration) <small>p.9</small></div>
+<ul>
+<li>검량선(calibration curve, working curve)은 분석 응답과 농도의 관계를 나타낸 그래프다.</li>
+<li>검량 방법은 네 가지다. 표준물과 직접 비교(direct comparison, titration), <b>외부 표준(external standard, 최소제곱법)</b>, <b>표준물 첨가(standard addition)</b>, <b>내부 표준(internal standard)</b>이다.</li>
+</ul>
+<div class=fig><img src="assets/ch01/std_addition.png" style="width:82%"><small>Fig 1-10 표준물 첨가법. 직선을 x축까지 외삽한 절편 (V<sub>s</sub>)<sub>0</sub>=−6.31 mL에서 미지 농도를 구한다. 기울기 m과 y절편 b로도 계산한다.</small></div>
+</div>
+
+<div class=sec><div class=bar>1-3. 분석법 고르기와 성능 지표 <small>p.10~16</small></div>
+<p>문제 정의 질문 여섯 가지: 필요한 정확도, 시료 양, 농도 범위, 방해 성분, 매트릭스 성질, 시료 수.</p>
+<p>성능 지표(figures of merit, Table 1-3)는 <b>precision, bias, sensitivity, detection limit, dynamic range, selectivity</b>이다. 그 밖에 속도, 편의성, 숙련도, 장비 비용, 시료당 비용을 본다(Table 1-4).</p>
+
+<div class=sub>정밀도(Precision) <small>p.12~13</small></div>
+<p>같은 방법으로 얻은 데이터끼리 서로 일치하는 정도다. 지표는 Table 1-5에 있다.</p>
+<div class=box>
+<math display=block><mrow><mi>s</mi><mo>=</mo><msqrt><mfrac><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mover><mi>x</mi><mo>‾</mo></mover><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt><mspace width="10pt"/><mtext>RSD</mtext><mo>=</mo><mfrac><mi>s</mi><mover><mi>x</mi><mo>‾</mo></mover></mfrac></mrow></math>
+<math display=block><mrow><msub><mi>s</mi><mi>m</mi></msub><mo>=</mo><mfrac><mi>s</mi><msqrt><mi>N</mi></msqrt></mfrac><mspace width="10pt"/><mtext>CV</mtext><mo>=</mo><mfrac><mi>s</mi><mover><mi>x</mi><mo>‾</mo></mover></mfrac><mo>×</mo><mn>100</mn><mo>%</mo><mspace width="10pt"/><mtext>variance</mtext><mo>=</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></math>
+<p class=en>s 절대 표준편차, RSD 상대 표준편차, s<sub>m</sub> 평균의 표준오차, CV 변동계수다.</p>
+</div>
+<div class=fig><img src="assets/ch01/precision.png" style="width:52%"><small>p.13 정밀도와 정확도. 정밀도는 화살끼리 모인 정도, 정확도(accuracy)는 과녁 중심(참값)에 가까운 정도다. 고정밀·저정확은 모였지만 중심에서 벗어난 경우다.</small></div>
+
+<div class=sub>편향(Bias)과 감도(Sensitivity) <small>p.14</small></div>
+<ul>
+<li>Bias는 계통오차(systematic, determinate error)의 크기다. 농도를 아는 표준기준물질(SRM)을 분석해 구한다.</li>
+</ul>
+<div class=box>
+<math display=block><mrow><mi mathvariant="normal">Δ</mi><mo>=</mo><mi>μ</mi><mo>−</mo><mi>τ</mi></mrow></math>
+<p class=en>μ 시료의 모평균 농도, τ 참값.</p></div>
+<ul>
+<li>감도는 작은 농도 차이를 구별하는 능력이다. 검량선 기울기와 측정의 재현성(정밀도) 두 가지가 감도를 제한한다.</li>
+</ul>
+<div class=box>
+<p>검량 감도(calibration sensitivity, IUPAC): 기울기 m이다.</p>
+<math display=block><mrow><mi>S</mi><mo>=</mo><mi>m</mi><mi>c</mi><mo>+</mo><msub><mi>S</mi><mtext>bl</mtext></msub></mrow></math>
+<p>분석 감도(analytical sensitivity): 기울기를 측정 표준편차로 나눈다.</p>
+<math display=block><mrow><mi>γ</mi><mo>=</mo><mfrac><mi>m</mi><msub><mi>s</mi><mi>s</mi></msub></mfrac></mrow></math>
+<p class=en>m 기울기, c 농도, S<sub>bl</sub> 바탕(blank) 신호, s<sub>s</sub> 측정의 표준편차.</p></div>
+<p class=why>검량 감도는 정밀도를 반영하지 못한다. 분석 감도는 기울기가 커도 잡음이 크면 작아지므로 실제 구별 능력을 나타낸다.</p>
+
+<div class=sub>검출한계(Detection limit) <small>p.15</small></div>
+<p>알려진 신뢰수준에서 검출할 수 있는 최소 농도나 질량이다. 신호 크기와 바탕 신호 요동의 비에 좌우된다.</p>
+<div class=box>
+<math display=block><mrow><msub><mi>S</mi><mi>m</mi></msub><mo>=</mo><msub><mover><mi>S</mi><mo>‾</mo></mover><mtext>bl</mtext></msub><mo>+</mo><mi>k</mi><msub><mi>s</mi><mtext>bl</mtext></msub><mspace width="14pt"/><msub><mi>c</mi><mi>m</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>S</mi><mi>m</mi></msub><mo>−</mo><msub><mover><mi>S</mi><mo>‾</mo></mover><mtext>bl</mtext></msub></mrow><mi>m</mi></mfrac></mrow></math>
+<p class=en>S<sub>m</sub> 구별 가능한 최소 신호, S̄<sub>bl</sub> 바탕 신호 평균, s<sub>bl</sub> 바탕 표준편차. Table 1-3은 "blank plus <b>three times</b> standard deviation of the blank", 즉 k=3이다.</p></div>
+
+<div class=sub>동적 범위(Dynamic range) <small>p.16</small></div>
+<div class=fig><img src="assets/ch01/dynamic_range.png" style="width:72%"><small>Fig 1-13 LOQ(정량한계)부터 LOL(직선성 한계)까지가 동적 범위다. c<sub>m</sub>(검출한계)은 LOQ보다 낮다.</small></div>
+<ul>
+<li>LOQ는 정량이 가능한 가장 낮은 농도다. LOL은 검량선이 직선에서 정해진 만큼 벗어나는 농도다.</li>
+</ul>
+</div>
+
+<div class=sec><div class=bar>1-4. 신호와 잡음(Chap 5) <small>p.17~18</small></div>
+<ul>
+<li>신호(signal)는 분석 대상에 관한 원하는 정보다. 잡음(noise)은 정확도·정밀도를 떨어뜨리고 검출 하한을 정하는 원치 않는 정보다.</li>
+</ul>
+<div class=box><math display=block><mrow><mfrac><mi>S</mi><mi>N</mi></mfrac><mo>=</mo><mfrac><mtext>average</mtext><mtext>standard deviation</mtext></mfrac><mo>=</mo><mfrac><mover><mi>x</mi><mo>‾</mo></mover><mi>s</mi></mfrac><mo>=</mo><mfrac><mn>1</mn><mtext>RSD</mtext></mfrac></mrow></math></div>
+<ul>
+<li><b>Chemical noise</b>: 화학계의 통제 불가 변수에서 온다. 온도·압력 변화가 평형을 옮기거나, 습도 변화, 분말의 층 분리, 빛에 민감한 물질의 변화, 실험실 증기가 예다.</li>
+<li><b>Thermal(Johnson) noise</b>: 저항, 축전기, 변환기 같은 저항 요소 안에서 전자의 열운동으로 생긴다.</li>
+<li><b>Shot noise</b>: 전자나 전하 입자가 접합(junction)을 건널 때 생긴다.</li>
+<li><b>Flicker noise</b>: 크기가 신호 주파수에 반비례한다(1/f).</li>
+<li><b>Environmental noise</b>: 주변 환경에서 오는 여러 잡음의 합이다.</li>
+</ul>
+</div>
+
+
+
+
+
+<div class=sec><div class=bar>1-5. 전자기 복사의 파동성 <small>p.19~33</small></div>
+<ul>
+<li>분광학(spectroscopy)은 복사와 물질의 상호작용을 다루는 학문이다. 분광법(spectrometric methods)은 광전 변환기 등으로 복사 세기를 잰다.</li>
+<li>복사는 <b>파동-입자 이중성(wave-particle duality)</b>을 가진다. 두 모형은 배타적이지 않고 서로 보완한다. 입자 모형에서 복사는 광자(photon)의 흐름이다.</li>
+</ul>
+<div class=sub>파동의 특성 <small>Fig 6-1, p.21</small></div>
+<ul>
+<li>평면편광 복사에서 전기장과 자기장은 서로 수직으로 진동하고 진행 방향에도 수직이다.</li>
+<li>진폭(A)은 최대점에서 전기장 벡터의 길이다. 주기(p)는 연속한 최대점이 한 점을 지나는 데 걸리는 시간이다. 진동수(ν)는 초당 진동 수이고 1/p와 같다. 파장(λ)은 이웃한 같은 위상 점 사이 거리다.</li>
+</ul>
+<div class=box>
+<math display=block><mrow><msub><mi>v</mi><mi>i</mi></msub><mo>=</mo><mi>ν</mi><msub><mi>λ</mi><mi>i</mi></msub><mspace width="12pt"/><mi>c</mi><mo>=</mo><mi>ν</mi><mi>λ</mi><mo>=</mo><mn>3.00</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup><mtext> m·s</mtext><msup><mi></mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></math>
+<math display=block><mrow><mi>E</mi><mo>=</mo><mi mathvariant="normal">h</mi><mi>ν</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">h</mi><mi>c</mi></mrow><mi>λ</mi></mfrac><mo>=</mo><mi mathvariant="normal">h</mi><mi>c</mi><mover><mi>ν</mi><mo>‾</mo></mover><mspace width="12pt"/><mover><mi>ν</mi><mo>‾</mo></mover><mo>=</mo><mfrac><mn>1</mn><mi>λ</mi></mfrac></mrow></math>
+<p class=en>v<sub>i</sub> 매질 i에서의 속도, ν̄ 파수(wavenumber, cm⁻¹). 진공 속도 c=2.997292×10⁸ m·s⁻¹이다.</p></div>
+<ul>
+<li><b>진동수는 광원이 정하고 매질이 바뀌어도 변하지 않는다.</b> 속도는 매질 조성에 따라 달라지므로 파장이 바뀐다.</li>
+<li>공기 중 속도는 c보다 약 0.03% 느리다. 유리에 들어가면 파장이 30% 넘게(500→330 nm) 줄었다가 공기로 나오면 되돌아온다(Fig 6-2).</li>
+</ul>
+<div class=fig><img src="assets/ch01/em_spectrum.png"><small>Fig 6-3 전자기 스펙트럼. 왼쪽일수록 에너지가 크다(γ선, X선, UV, 가시, IR, 마이크로파, 라디오).</small></div>
+<div class=fig><img src="assets/ch01/table6_1.png"><small>Table 6-1 분광법별 파장 범위와 양자 전이. UV-vis는 결합 전자, IR·Raman은 분자의 회전/진동, NMR은 자기장 속 핵 스핀이다.</small></div>
+
+<div class=sub>중첩(Superposition)과 Fourier 변환 <small>p.24~26</small></div>
+<math display=block><mrow><mi>y</mi><mo>=</mo><mi>A</mi><mi>sin</mi><mo>(</mo><mi>ω</mi><mi>t</mi><mo>+</mo><mi>φ</mi><mo>)</mo><mo>=</mo><mi>A</mi><mi>sin</mi><mo>(</mo><mn>2</mn><mi>π</mi><mi>ν</mi><mi>t</mi><mo>+</mo><mi>φ</mi><mo>)</mo></mrow></math>
+<ul>
+<li>y는 시간 t에서 전기장 크기, φ는 위상각, ω=2πν는 각속도다.</li>
+<li>여러 파동이 만나면 변위가 더해진다. 위상이 같으면 보강 간섭(constructive), 반대면 상쇄 간섭(destructive)이다.</li>
+<li>진동수가 조금 다른 두 파동을 겹치면 맥놀이(beat)가 생긴다.</li>
+</ul>
+<div class=box><math display=block><mrow><msub><mi>P</mi><mi>b</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mi>ν</mi></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><msub><mi>ν</mi><mn>2</mn></msub><mo>−</mo><msub><mi>ν</mi><mn>1</mn></msub></mrow></mfrac></mrow></math></div>
+<ul>
+<li>Fourier 변환은 복잡한 파형을 단순한 사인파 성분으로 나누는 수학 연산이다. 중첩의 중요한 응용이다. 사인파 3개, 9개를 더하면 점점 사각파에 가까워진다(Fig 6-6).</li>
+</ul>
+
+<div class=sub>회절(Diffraction) <small>p.27</small></div>
+<p>평행 빔이 좁은 틈을 지나며 휘어 퍼지는 현상이다. 틈 폭이 파장과 비슷할 때 뚜렷하다. 두 틈을 지난 빛은 밝고 어두운 무늬를 만든다.</p>
+<div class=box><math display=block><mrow><mi>n</mi><mi>λ</mi><mo>=</mo><mover><mrow><mi>B</mi><mi>C</mi></mrow><mo>‾</mo></mover><mi>sin</mi><mi>θ</mi></mrow></math><p class=en>n 간섭 차수(order), BC 두 틈 사이 거리. 회절발(grating) 단색화 장치의 원리다(2장 Instrumentation 참조).</p></div>
+
+<div class=sub>투과(Transmission)와 굴절률 <small>p.28</small></div>
+<ul>
+<li>투명 물질 속에서 복사는 진공보다 느리게 진행한다. 진동수가 바뀌지 않으므로 상호작용은 영구적 에너지 전달이 아니다.</li>
+</ul>
+<div class=box><math display=block><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>=</mo><mfrac><mi>c</mi><msub><mi>v</mi><mi>i</mi></msub></mfrac></mrow></math><p class=en>대부분 액체 1.3~1.8(물 <b>1.33</b>), 고체 1.3~2.5 이상(유리 <b>1.52</b>).</p></div>
+
+<div class=sub>분산(Dispersion) <small>Fig 6-9, p.29</small></div>
+<ul>
+<li>분산은 굴절률이 파장(진동수)에 따라 변하는 현상이다.</li>
+<li><b>정상 분산(normal)</b>: 진동수가 커질수록(파장이 짧을수록) 굴절률이 서서히 커진다.</li>
+<li><b>이상 분산(anomalous)</b>: 흡수가 일어나는 진동수 근처에서 굴절률이 급격히 변한다.</li>
+</ul>
+
+<div class=sub>굴절(Refraction): Snell 법칙 <small>p.30</small></div>
+<div class=two style="align-items:center">
+<div class=box style="margin:0"><math display=block><mrow><mfrac><mrow><mi>sin</mi><msub><mi>θ</mi><mn>1</mn></msub></mrow><mrow><mi>sin</mi><msub><mi>θ</mi><mn>2</mn></msub></mrow></mfrac><mo>=</mo><mfrac><msub><mi>n</mi><mn>2</mn></msub><msub><mi>n</mi><mn>1</mn></msub></mfrac><mo>=</mo><mfrac><msub><mi>v</mi><mn>1</mn></msub><msub><mi>v</mi><mn>2</mn></msub></mfrac></mrow></math></div>
+<div class=fig style="margin:0"><img src="assets/ch01/snell.png" style="width:70%"></div>
+</div>
+<ul>
+<li>굴절은 두 매질에서 속도가 달라서 생긴다. 밀한 매질(M<sub>2</sub>, n 큼)로 들어가면 법선 쪽으로 꺾여 θ<sub>2</sub>&lt;θ<sub>1</sub>이 된다.</li>
+</ul>
+
+<div class=sub>반사(Reflection) <small>p.31</small></div>
+<div class=box><math display=block><mrow><mfrac><msub><mi>I</mi><mi>r</mi></msub><msub><mi>I</mi><mn>0</mn></msub></mfrac><mo>=</mo><mfrac><msup><mrow><mo>(</mo><msub><mi>n</mi><mn>2</mn></msub><mo>−</mo><msub><mi>n</mi><mn>1</mn></msub><mo>)</mo></mrow><mn>2</mn></msup><msup><mrow><mo>(</mo><msub><mi>n</mi><mn>2</mn></msub><mo>+</mo><msub><mi>n</mi><mn>1</mn></msub><mo>)</mo></mrow><mn>2</mn></msup></mfrac></mrow></math><p class=en>수직 입사일 때다. I<sub>r</sub> 반사 세기, I<sub>0</sub> 입사 세기. 굴절률 차이가 클수록 반사가 커진다.</p></div>
+
+<div class=sub>산란(Scattering)의 종류 <small>p.32</small></div>
+<ul>
+<li>복사의 아주 작은 일부가 원래 경로에서 모든 각도로 퍼진다. 입자가 클수록 산란 세기가 커진다.</li>
+<li><b>Rayleigh scattering</b>: 파장보다 훨씬 작은 분자나 분자 집합체에 의한 산란이다. 세기는 <b>파장의 −4제곱(1/λ⁴)</b>, 입자 크기, <b>편극률(polarizability)의 제곱</b>에 비례한다. 진동수는 그대로다(탄성 산란).</li>
+<li><b>Raman scattering</b>: 산란광 일부의 진동수가 양자화된 만큼 바뀐다. 편극 과정에서 일어나는 진동 에너지 준위 전이 때문이다(5장).</li>
+</ul>
+<p class=why>Rayleigh 세기가 1/λ⁴에 비례하므로 짧은 파장(파란빛)이 훨씬 강하게 산란된다. [일반 지식] 하늘이 파란 이유다.</p>
+
+<div class=sub>편광(Polarization) <small>Fig 6-11·12, p.33</small></div>
+<ul>
+<li>비편광 빛은 전기장 벡터가 모든 평면에서 진동한다. 각 벡터를 서로 수직인 두 성분으로 나눌 수 있다.</li>
+<li>평면편광(plane-polarized) 빛은 한 평면에서만 진동한다.</li>
+</ul>
+</div>
+
+
+
+
+
+<div class=sec><div class=bar>1-6. 복사의 양자역학적 성질 <small>p.34~49</small></div>
+<div class=sub>광전효과(Photoelectric effect) <small>p.34~35</small></div>
+<ul>
+<li>복사가 방출·흡수될 때는 에너지가 영구적으로 이동한다. 이것을 설명하려면 복사를 불연속 입자, 즉 <b>광자(photon, quanta)</b>의 흐름으로 봐야 한다(입자 모형).</li>
+<li>1887년 <b>Hertz</b>가 빛을 비추면 대전 구 사이에 불꽃이 더 쉽게 튀는 것을 봤다. 1905년 <b>Einstein</b>이 이론으로 설명했다. 1916년 <b>Millikan</b>이 진공 광전관(Fig 6-13)으로 실험했다.</li>
+<li>진공 광전관에서 빛을 받은 음극(cathode)이 전자를 내보낸다. 양극 전압을 거꾸로 걸어 전류가 0이 되는 전압이 저지 전압(stopping voltage) V<sub>0</sub>이다.</li>
+</ul>
+<div class=box>
+<math display=block><mrow><mi>K</mi><msub><mi>E</mi><mi>m</mi></msub><mo>=</mo><mi>e</mi><msub><mi>V</mi><mn>0</mn></msub><mo>=</mo><mi mathvariant="normal">h</mi><mi>ν</mi><mo>−</mo><mi>ω</mi><mspace width="12pt"/><mi>E</mi><mo>=</mo><mi mathvariant="normal">h</mi><mi>ν</mi><mo>=</mo><mi mathvariant="normal">h</mi><mfrac><mi>c</mi><mi>λ</mi></mfrac><mo>=</mo><mi>K</mi><msub><mi>E</mi><mi>m</mi></msub><mo>+</mo><mi>ω</mi></mrow></math>
+<p class=en>KE<sub>m</sub> 광전자의 최대 운동에너지, h 플랑크 상수(6.6254×10⁻³⁴ J·s), <b>ω 일함수(work function)</b>: 전자를 금속 표면에서 떼어 내는 데 필요한 최소 에너지, e 전자 전하(−1.60×10⁻¹⁹ C), V<sub>0</sub> 저지 전압.</p></div>
+<div class=two>
+<div class=fig style="margin:0"><img src="assets/ch01/photo_diagram.png"><small>속박 전자가 hν를 받아 ω만큼 써서 자유 전자가 되고 나머지가 KE<sub>m</sub>이 된다.</small></div>
+<div class=fig style="margin:0"><img src="assets/ch01/photo_graph.png" style="width:78%"><small>Fig 6-14 Cs, Mg, Cu. 기울기는 모두 h, y절편은 −ω, x절편은 문턱 진동수다.</small></div>
+</div>
+<p class=why>KE<sub>m</sub>은 빛의 세기가 아니라 진동수에만 비례한다. 문턱 진동수(ω/h)보다 낮은 빛은 아무리 세도 전자를 못 낸다. 세기는 튀어나오는 전자 수만 늘린다. [일반 지식] 파동 모형으로는 설명이 안 되는 부분이다.</p>
+
+<div class=sub>화학종의 에너지 상태 <small>p.36</small></div>
+<ul>
+<li>양자론의 두 가정: 원자·이온·분자는 정해진 불연속 에너지 상태로만 존재한다. 상태가 바뀔 때 두 상태의 에너지 차와 정확히 같은 에너지를 흡수하거나 방출한다.</li>
+</ul>
+<div class=box><math display=block><mrow><msub><mi>E</mi><mn>1</mn></msub><mo>−</mo><msub><mi>E</mi><mn>0</mn></msub><mo>=</mo><mi mathvariant="normal">h</mi><mi>ν</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">h</mi><mi>c</mi></mrow><mi>λ</mi></mfrac></mrow></math></div>
+<ul><li>에너지 상태에는 전자(electronic), 진동(vibrational), 회전(rotational) 상태가 있다. 바닥 상태(ground)와 들뜬 상태(excited)로 나뉜다. 간격은 전자 &gt; 진동 &gt; 회전 순이다.</li></ul>
+
+<div class=sub>복사와 물질의 상호작용 <small>Fig 6-15~18, p.37~41</small></div>
+<table><tr><th>과정</th><th>내용</th></tr>
+<tr><td>Emission</td><td>열·전기·화학 에너지로 들뜬 뒤 빛을 낸다. 화학반응이면 화학발광(chemiluminescence)이다.</td></tr>
+<tr><td>Absorption</td><td>들어온 P<sub>0</sub> 중 E<sub>1</sub>, E<sub>2</sub>에 맞는 파장만 흡수되고 P가 투과한다.</td></tr>
+<tr><td>Photo&shy;luminescence</td><td>빛을 흡수해 들뜬 뒤 빛(P<sub>L</sub>)을 다시 낸다. 형광과 인광이다.</td></tr>
+<tr><td>Scattering</td><td>가상 준위로 갔다가 hν<sub>ex</sub>±hν<sub>v</sub>로 나온다(Raman의 Stokes/anti-Stokes).</td></tr></table>
+
+<div class=sub>방출 스펙트럼 <small>p.42~45</small></div>
+<ul>
+<li>방출 스펙트럼에는 <b>선(line)</b>, <b>띠(band)</b>, <b>연속(continuum)</b> 스펙트럼이 있다(Fig 6-19 소금물 불꽃).</li>
+<li>복사를 만드는 방법은 네 가지다. 전자 충격(X선), 전류·스파크·불꽃·아크(UV, 가시, IR), 빛 조사(형광), 발열 화학반응(화학발광)이다.</li>
+</ul>
+<div class=fig><img src="assets/ch01/line_band.png"><small>Fig 6-21 (a) Na 원자는 전자 준위끼리만 전이해 590·330 nm <b>선 스펙트럼</b>을 낸다. (b) 분자는 전자 준위마다 진동 준위가 있어 가까운 여러 선이 모인 <b>띠 스펙트럼</b>을 낸다.</small></div>
+<ul>
+<li>연속 스펙트럼은 고체를 백열(incandescence)까지 가열할 때 생긴다. 흑체 복사(black-body radiation)는 표면 재료가 아니라 <b>온도</b>로 정해진다. 온도가 높을수록 최대점이 짧은 파장으로 옮겨 간다(Fig 6-22).</li>
+<li>가열 고체는 기기의 IR, 가시, 긴 파장 UV 광원으로 중요하다.</li>
+</ul>
+
+<div class=sub>흡수(Absorption) <small>p.46~47</small></div>
+<ul>
+<li>흡수는 특정 진동수가 선택적으로 제거되며 에너지가 시료로 옮겨 가는 과정이다. 바닥 상태에서 들뜬 상태로 간다.</li>
+<li>원자 흡수는 전자 전이만 있어 좁은 선이다(Na 증기).</li>
+<li>분자 흡수는 E = E<sub>elec</sub> + E<sub>vib</sub> + E<sub>rot</sub>이라 띠가 된다. 용액에서는 넓은 연속 띠가 된다(Fig 6-23).</li>
+<li>자기장이 유도하는 흡수: NMR은 핵, ESR은 전자의 흡수다.</li>
+</ul>
+<div class=fig><img src="assets/ch01/energy_levels.png" style="width:78%"><small>Fig 6-24 형광 유기분자의 준위. (a) 흡수(가시는 전자 전이, IR은 진동 전이) (b) 비복사 이완 (c) 형광(공명 형광 포함).</small></div>
+
+<div class=sub>이완(Relaxation) <small>p.48</small></div>
+<ul>
+<li>이완은 들뜬 원자·분자가 바닥 상태로 돌아가는 과정이다.</li>
+<li><b>비복사 이완(nonradiative)</b>: 다른 분자와 충돌해 작은 단계로 에너지를 운동에너지로 잃는다.</li>
+<li><b>형광(fluorescence)</b>은 빠르고 들뜬 뒤 약 <b>10⁻⁵ s</b> 안에 끝난다. <b>인광(phosphorescence)</b>은 10⁻⁵ s보다 길고 조사를 멈춘 뒤 몇 분, 몇 시간 이어지기도 한다.</li>
+<li>공명 형광(resonance)은 흡수 파장과 같은 파장을 낸다. 비공명 형광(nonresonance)은 진동 이완 뒤 더 긴 파장을 낸다.</li>
+</ul>
+
+<div class=sub>불확정성 원리 <small>p.49</small></div>
+<div class=box><math display=block><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>·</mo><mi mathvariant="normal">Δ</mi><mi>ν</mi><mo>≥</mo><mn>1</mn><mspace width="12pt"/><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>·</mo><mi mathvariant="normal">Δ</mi><mi>E</mi><mo>=</mo><mi mathvariant="normal">h</mi></mrow></math>
+<p class=en>1927년 Heisenberg. 맥놀이 한 주기를 재려면 Δt ≥ 1/Δν가 필요하다. 시간 Δt 동안 잰 에너지는 적어도 h/Δt만큼 불확실하다.</p></div>
+</div>
+
+<div class=sec><div class=bar>1-7. 분광 측정의 정량 <small>p.50~51</small></div>
+<div class=box><math display=block><mrow><mi>S</mi><mo>=</mo><mi>k</mi><mi>P</mi><mspace width="10pt"/><mtext>방출·발광·산란: </mtext><mi>S</mi><mo>=</mo><msup><mi>k</mi><mo>′</mo></msup><mi>c</mi></mrow></math>
+<p class=en>S 전압·전류 신호, P 복사력(radiant power, 단위 면적에 초당 도달하는 에너지).</p></div>
+<div class=box>
+<math display=block><mrow><mi>T</mi><mo>=</mo><mfrac><mi>P</mi><msub><mi>P</mi><mn>0</mn></msub></mfrac><mspace width="10pt"/><mi>A</mi><mo>=</mo><mo>−</mo><msub><mi>log</mi><mn>10</mn></msub><mi>T</mi><mo>=</mo><mi>log</mi><mfrac><msub><mi>P</mi><mn>0</mn></msub><mi>P</mi></mfrac><mo>=</mo><mi>ε</mi><mi>b</mi><mi>c</mi></mrow></math>
+<p class=en><b>Beer 법칙</b>. A=abc에서 a 흡광도계수(absorptivity, L·g⁻¹·cm⁻¹), A=εbc에서 ε 몰흡광계수(L·mol⁻¹·cm⁻¹), b 광로 길이(cm), c 농도. %T = T×100이다. 한계는 2장에서 다룬다.</p></div>
+<div class=fig><img src="assets/ch01/table6_2.png"><small>Table 6-2 분광법의 네 부류. 방출·발광·산란은 신호가 농도에 비례하고(P=kc), 흡수만 로그 관계다(−log P/P<sub>0</sub>=kc).</small></div>
+</div>
+
+<div class=sec><div class=bar>헷갈리는 짝</div>
+<table>
+<tr><th>구별 기준</th><th>A</th><th>B</th></tr>
+<tr><td>무엇을 보나</td><td>Precision: 측정값끼리 모임</td><td>Accuracy: <b>참값</b>과 가까움</td></tr>
+<tr><td>잡음 반영</td><td>Calibration sens. m</td><td>Analytical sens. γ=m/s<sub>s</sub></td></tr>
+<tr><td>농도 하한</td><td>검출한계 c<sub>m</sub>: 있다/없다</td><td>LOQ: <b>정량</b> 가능 하한</td></tr>
+<tr><td>진동수 변화</td><td>Rayleigh: 없음(탄성)</td><td>Raman: <b>양자화된 변화</b></td></tr>
+<tr><td>지속 시간</td><td>형광 &lt;10⁻⁵ s</td><td>인광 &gt;10⁻⁵ s</td></tr>
+<tr><td>스펙트럼</td><td>선: 원자, 전자 전이</td><td>띠: 분자, <b>진동 준위</b> 포함</td></tr>
+<tr><td>굴절률 변화</td><td>정상 분산: 서서히</td><td>이상 분산: <b>흡수대</b> 근처 급변</td></tr>
+<tr><td>매질 바뀔 때</td><td>진동수: 그대로</td><td>속도·파장: 변함</td></tr>
+</table></div>
+
+<div class=sec><div class=sub>확인 질문</div>
+<ol class=q>
+<li>광전효과에서 일함수란 무엇이고, KE<sub>m</sub>을 ν에 대해 그리면 기울기와 절편은 각각 무엇인가? → 1-6</li>
+<li>Snell 법칙을 쓰고, 빛이 유리로 들어갈 때 진동수·속도·파장 중 무엇이 변하는가? → 1-5</li>
+<li>Rayleigh 산란 세기를 정하는 세 가지 요인과 Raman 산란과의 차이는? → 1-5</li>
+<li>Precision과 accuracy의 차이, 그리고 S/N과 RSD의 관계는? → 1-3, 1-4</li>
+<li>검출한계 c<sub>m</sub>을 바탕 신호로 정의하는 식은? → 1-3</li>
+</ol></div>
+</div>
+<script src=paginate.js></script>
+</body></html>

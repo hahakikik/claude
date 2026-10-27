@@ -1,0 +1,29 @@
+@page{size:595pt 842pt;margin:0}*{box-sizing:border-box;margin:0;padding:0}
+body{word-break:keep-all;overflow-wrap:break-word;line-break:strict;font-family:"Noto Sans CJK KR","WenQuanYi Zen Hei",sans-serif;color:#000;font-size:9.6pt;line-height:1.36;background:#fff}
+.page{width:595pt;height:841pt;padding:16pt 22pt;position:relative;overflow:hidden;page-break-after:always}
+.head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3pt solid #000;padding-bottom:3pt;margin-bottom:6pt}
+.head h1{font-size:17pt}.head span{font-size:8.5pt}
+.cols{column-count:2;column-gap:18pt;column-rule:2.2pt solid #000;column-fill:auto;height:772pt}
+.sec{margin-bottom:6pt}
+.bar{background:#000;color:#fff;font-weight:bold;font-size:10.4pt;padding:1.5pt 6pt;margin-bottom:3pt}
+.bar small{font-weight:normal;font-size:8pt;margin-left:4pt}
+.bar,.sub{break-after:avoid-column}.sub{font-weight:bold;border-bottom:1pt solid #000;margin:4pt 0 2pt;font-size:9.8pt}
+.sub small{font-weight:normal;font-size:8pt}
+p{margin:2pt 0}
+ul{list-style:none}li{padding-left:10pt;position:relative;margin:1.4pt 0}
+li:before{content:"■";font-size:5pt;position:absolute;left:0;top:3.4pt}
+ol{padding-left:14pt}ol li{padding-left:0}ol li:before{content:none}
+b{font-weight:bold;background:#d6d6d6;padding:0 1.5pt}
+.box{border:1.3pt solid #000;padding:3pt 6pt;margin:4pt 0;break-inside:avoid-column}
+.fig{margin:4pt 0;text-align:center;break-inside:avoid-column}
+.fig img{width:100%;border:.8pt solid #000;display:block;margin:0 auto}
+.fig small{display:block;font-size:8pt;margin-top:1pt;text-align:left}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:5pt}
+table{width:100%;border-collapse:collapse;font-size:9pt;line-height:1.3;margin:3pt 0;break-inside:avoid-column}
+th,td{border:1pt solid #000;padding:1.5pt 4pt;vertical-align:top}th{background:#000;color:#fff}td:first-child{font-weight:bold;background:#eee;width:58pt}
+.note{font-size:8.3pt;border-left:3pt solid #000;padding-left:5pt;margin:3pt 0}
+.why{margin:1pt 0 2pt}.why:before{content:"왜? ";font-weight:bold;border:.8pt solid #000;padding:0 2pt;margin-right:3pt;font-size:8.3pt}
+math{font-size:10.4pt}math[display=block]{margin:2pt 0}
+.en{font-size:8.8pt}
+.foot{position:absolute;bottom:8pt;left:22pt;right:22pt;font-size:7.6pt;border-top:.7pt solid #000;padding-top:2pt;display:flex;justify-content:space-between}
+.q li{margin:2pt 0}
